@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Planto</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="back">Back</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="password_confirmation">Password Confirmation</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="join">Join</string>
+    <string name="us">Us</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="forgot_the_password">Forgot the Password?</string>
+    <string name="login_for_your">Login For Your</string>
+    <string name="next_adventure">Next Adventure</string>
+    <string name="continue_">Continue</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="sign_in_with_email">Sign in with Email Address</string>
+    <string name="planto">PlanTo</string>
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
+
+    <!--     Facebook Login items  Values-->
+    <string name="facebook_app_id">732324915170311</string>
+    <string name="fb_login_protocol_scheme">fb732324915170311</string>
+    <string name="facebook_client_token">6FWxVjUGPA9T0UiGDDoZ5zeml8k=</string>
+
+    <!--     Home Screen  Values-->
+    <string name="search_bar">Search...</string>
+    <string name="plants">My Plants</string>
+    <string name="market">Market</string>
+    <string name="experts">Experts</string>
+    <string name="reminders">Reminder</string>
+    <string name="recently_added">Recently Added</string>
+    <string name="recently_added_in_the_last_month">All Plants that were recently added in the last month</string>
+    <string name="most_view_plants">Most Viewed</string>
+    <string name="view_all">View All</string>
+    <string name="categories">Categories</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="welcome_to_planto_application">Welcome to \n Planto Application</string>
+    <string name="lot_more_experience_inside">Explore a new world with us while it will be easy for you to identify any disease on your plants easily and for free and lot more experience inside</string>
+</resources>

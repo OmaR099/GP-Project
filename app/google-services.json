@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "725433163314",
+    "firebase_url": "https://login-and-sign-up-21ceb-default-rtdb.firebaseio.com",
+    "project_id": "login-and-sign-up-21ceb",
+    "storage_bucket": "login-and-sign-up-21ceb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725433163314:android:1ba3084bb542cc42d3a62b",
+        "android_client_info": {
+          "package_name": "com.example.loginscreen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725433163314-ivdb5vgphjub8jqtt699jhl041kt0qr0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.loginscreen",
+            "certificate_hash": "e855b15635063c0f53d148860c3a19e737a697c9"
+          }
+        },
+        {
+          "client_id": "725433163314-qha9dubeerbdbakku6to6q4h818h337f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD47TGIBePmNCrSSuSrQMO85XR13En4Wus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725433163314-qha9dubeerbdbakku6to6q4h818h337f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
