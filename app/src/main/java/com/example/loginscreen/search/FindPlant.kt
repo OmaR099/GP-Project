@@ -1,4 +1,4 @@
-package com.example.loginscreen.Search
+package com.example.loginscreen.search
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
