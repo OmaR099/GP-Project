@@ -8,10 +8,10 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
-        app:layout_constraintStart_toStartOf="0"
-        app:layout_constraintTop_toTopOf="0">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,8 +35,8 @@
                         android:layout_marginTop="32dp"
                         android:layout_marginEnd="32dp"
                         android:elevation="8dp"
-                        app:layout_constraintEnd_toEndOf="0"
-                        app:layout_constraintTop_toTopOf="0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/notification" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -81,10 +81,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintHorizontal_bias="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toTopOf="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/arc_2" />
 
                 <LinearLayout
@@ -93,9 +93,9 @@
                     android:gravity="center"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toTopOf="0">
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="100dp"
@@ -120,10 +120,10 @@
                                     android:id="@+id/ic_fav"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    app:layout_constraintBottom_toBottomOf="0"
-                                    app:layout_constraintEnd_toEndOf="0"
-                                    app:layout_constraintStart_toStartOf="0"
-                                    app:layout_constraintTop_toTopOf="0"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
                                     app:srcCompat="@drawable/ic_reminder" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -161,10 +161,10 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:importantForAccessibility="no"
-                                    app:layout_constraintBottom_toBottomOf="0"
-                                    app:layout_constraintEnd_toEndOf="0"
-                                    app:layout_constraintStart_toStartOf="0"
-                                    app:layout_constraintTop_toTopOf="0"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
                                     app:srcCompat="@drawable/ic_expert" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -201,10 +201,10 @@
                                     android:id="@+id/ic_market"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    app:layout_constraintBottom_toBottomOf="0"
-                                    app:layout_constraintEnd_toEndOf="0"
-                                    app:layout_constraintStart_toStartOf="0"
-                                    app:layout_constraintTop_toTopOf="0"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
                                     app:srcCompat="@drawable/ic_weather" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -225,9 +225,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
                     android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="0"
-                    app:layout_constraintEnd_toEndOf="0"
-                    app:layout_constraintStart_toStartOf="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView7">
 
                     <LinearLayout
@@ -450,9 +450,9 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="16dp"
                         android:orientation="vertical"
-                        app:layout_constraintBottom_toBottomOf="0"
-                        app:layout_constraintEnd_toEndOf="0"
-                        app:layout_constraintStart_toStartOf="0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView7">
 
                         <LinearLayout
