@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tips_memo1000_fragment_a_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black_128">
+
+    <LinearLayout
+        android:layout_width="@dimen/x590"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/tips_memo1000_fragment_tips_content_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tips_memo1000_fragment_a_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/x48"
+            android:layout_marginTop="@dimen/y58"
+            android:layout_marginRight="@dimen/x48"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/tips_memo1000_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x34"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/tips_memo1000_fragment_img_right"
+            android:layout_width="@dimen/x420"
+            android:layout_height="@dimen/y280"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y16"
+            android:src="@drawable/md5_8c268ba8987ee9f18d5fb68275dcd09e" />
+
+        <View
+            android:id="@+id/tips_memo1000_fragment_view_divider"
+            android:layout_width="@dimen/x450"
+            android:layout_height="@dimen/y2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y20"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/tips_memo1000_fragment_text_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/x48"
+            android:layout_marginTop="@dimen/y28"
+            android:layout_marginRight="@dimen/x48"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/tips_memo1000_wrong_desc"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x28" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/x466"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y20">
+
+            <LinearLayout
+                android:layout_width="@dimen/x210"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y144"
+                    android:src="@drawable/md5_59ad27fc6802b64ec2998fa5b385b6ac" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/y4"
+                    android:gravity="left"
+                    android:includeFontPadding="false"
+                    android:text="@string/tips_memo1000_wrong_one"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x26" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/x210"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y144"
+                    android:src="@drawable/md5_c15683abf408db0464e68007061d6691" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/y4"
+                    android:gravity="left"
+                    android:includeFontPadding="false"
+                    android:text="@string/tips_memo1000_wrong_two"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x26" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/x466"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y24">
+
+            <LinearLayout
+                android:layout_width="@dimen/x210"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/x210"
+                    android:layout_height="@dimen/y144"
+                    android:src="@drawable/md5_e32e815392c0d1a2bb4f4ea31be13b31" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/y4"
+                    android:includeFontPadding="false"
+                    android:text="@string/tips_memo1000_wrong_three"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x26" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/x210"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/x210"
+                    android:layout_height="@dimen/y144"
+                    android:src="@drawable/md5_b04a0e0ba649290b100b3e601d4931ea" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/y4"
+                    android:includeFontPadding="false"
+                    android:text="@string/tips_memo1000_wrong_four"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x26" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/got_it_btn"
+            android:layout_width="@dimen/x364"
+            android:layout_height="@dimen/y82"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y40"
+            android:layout_marginBottom="@dimen/y58"
+            android:background="@drawable/md5_8e233dfc6206f16debd671b8049562d0"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/tips_memo1000_btn"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</FrameLayout>

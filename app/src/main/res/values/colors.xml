@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!--     Login/Sign-up   Colors-->
-
-    <color name="black">#FF000000</color>
-    <color name="white">#f2f1f6</color>
-    <color name="grey">#2C2B2B</color>
-    <color name="green">#0d986a</color>
-    <color name="black1">#C6000000</color>
-    <color name="blue1">#FF0866FF</color>
-    <color name="white1">#E8FEFEFE</color>
-    <color name="yellow">#FFC801</color>
-    <color name="light_blue">#7394C1</color>
-
-    <!--     Actionbar   Colors-->
-
-    <color name="colorPrimaryDark">#0d986a</color>
-
-    <!--     Home   Colors-->
+    <color name="DarkGray">#333333</color>
     <color name="Home_color">#f1f5fb</color>
-    <color name="banner_background">#f7edce</color>
-    <color name="banner_background_light">#f0efe8</color>
-    <color name="card1">#4CAF50</color>
+    <color name="MainBackground">#f8f8f8</color>
+    <color name="add_button">#0b7c57</color>
+    <color name="black">#ff000000</color>
+    <color name="black1">#c6000000</color>
+    <color name="blue1">#ff0866ff</color>
+    <color name="button_material_dark">#ff5a595b</color>
+    <color name="button_material_light">#ffd6d7d7</color>
+    <color name="card1">#4caf50</color>
     <color name="card2">#73d2d2</color>
     <color name="card3">#ffc6a0</color>
     <color name="card4">#b6d6fb</color>
-    <color name="search_box">#68155C45</color>
-    <color name="add_button">#0B7C57</color>
-    <color name="text_color">#49454f</color>
-
+    <color name="colorPrimaryDark">#0d986a</color>
+    <color name="colorShadow">#6f8b82</color>
+    <color name="color_0f4d2e">#0f4d2e</color>
+    <color name="color_1fcc98">#1fcc98</color>
+    <color name="color_232323">#232323</color>
+    <color name="color_255d41">#255d41</color>
+    <color name="color_2db270">#2db270</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_41d98c">#41d98c</color>
+    <color name="color_4dbf99">#4dbf99</color>
+    <color name="color_62857a">#62857a</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_9055fb">#9055fb</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_black_128">#80000000</color>
+    <color name="color_f2f2f2">#f2f2f2</color>
+    <color name="color_f5f8fa">#f5f8fa</color>
+    <color name="transparent">#000d986a</color>
+    <color name="white">#ffffff</color>
+    <color name="white1">#e8fefefe</color>
+    <color name="yellow">#ffc801</color>
+    <color name="white_getStarted">#f2f1f6</color>
+    <color name="fefffe">#fefffe</color>
+    <color name="gl_text_color3">#999999</color>
+    <color name="gl_divider_color">#f3f3f3</color>
+    <color name="green">#0d986a</color>
+    <color name="grey">#2c2b2b</color>
+    <color name="gl_text_color2">#666666</color>
 </resources>

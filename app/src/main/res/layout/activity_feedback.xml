@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/layout_toolbar_new" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/x32"
+                android:background="@drawable/solid_white_8"
+                android:elevation="@dimen/x4"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/x54"
+                android:paddingEnd="@dimen/x54">
+
+                <LinearLayout
+                    android:id="@+id/ll_premium_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x24"
+                        android:text="@string/vip_customer_service_subtitle"
+                        android:textColor="#ff000000"
+                        android:textSize="@dimen/x44"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x6"
+                        android:text="@string/vip_customer_service_subcontent_1"
+                        android:textColor="#ff666666"
+                        android:textSize="@dimen/x28" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_ask_expert"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x92"
+                        android:layout_marginTop="@dimen/x28"
+                        android:background="@drawable/stroke_1bb38d"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/x20"
+                        android:paddingEnd="@dimen/x20">
+
+                        <TextView
+                            android:id="@+id/tv_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableRight="@drawable/icon_arrows_green_right"
+                            android:drawablePadding="@dimen/x18"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/vip_customer_service_subcontent_2"
+                            android:textColor="#ff1bb38d"
+                            android:textSize="@dimen/x32"
+                            app:autoSizeMaxTextSize="@dimen/x32"
+                            app:autoSizeMinTextSize="@dimen/x10"
+                            app:autoSizeTextType="uniform" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x56"
+                    android:text="@string/vip_customer_service_introduce"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/x36"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_email_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x32"
+                    android:text="@string/text_your_emain_addr"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/x30"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x80"
+                    android:layout_marginTop="@dimen/x20"
+                    android:background="@drawable/background_feedback_input"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/x20"
+                    android:paddingEnd="@dimen/x20"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_message_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x32"
+                    android:text="@string/text_description"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/x30"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x232"
+                    android:layout_marginTop="@dimen/x20"
+                    android:background="@drawable/background_feedback_input"
+                    android:gravity="top"
+                    android:hint="@string/text_feedback_description_placeholder"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingExtra="@dimen/x5"
+                    android:paddingStart="@dimen/x20"
+                    android:paddingTop="@dimen/x28"
+                    android:paddingEnd="@dimen/x20"
+                    android:paddingBottom="@dimen/x28"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/tv_image_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x40"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/x30"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x180"
+                    android:layout_marginTop="@dimen/x20"
+                    android:layout_marginBottom="@dimen/x40" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x92"
+                android:layout_marginStart="@dimen/x32"
+                android:layout_marginEnd="@dimen/x32"
+                android:layout_marginBottom="@dimen/x40"
+                android:alpha="0.5"
+                android:background="@drawable/gradient_3ecca8_32a689_h"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="@string/text_send"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/x36" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
