@@ -315,4 +315,7 @@
     <string name="vip_customer_service_subcontent_2">Get plant care advice</string>
     <string name="vip_customer_service_subtitle">Hi. How Can We Help?</string>
     <string name="welcome_to_planto_application">Welcome to \n Planto Application</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="profile">Profile</string>
+    <string name="weather">Weather</string>
 </resources>

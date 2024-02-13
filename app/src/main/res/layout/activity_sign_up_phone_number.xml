@@ -124,7 +124,7 @@
             app:layout_constraintBottom_toTopOf="@+id/nameLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="parent" />
+            app:layout_constraintVertical_bias="0" />
 
         <TextView
             android:id="@+id/textView3"

@@ -29,12 +29,10 @@ class ProfileActivity : BaseActivity() {
     private lateinit var storageReference: StorageReference
     private lateinit var imageUri: Uri
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         auth = FirebaseAuth.getInstance()
         databaseReference = FirebaseDatabase.getInstance().getReference("Users")
@@ -49,12 +47,10 @@ class ProfileActivity : BaseActivity() {
 
         fbImg = findViewById(R.id.profile_img)
 
-
         // Functions Calls
         logout()
         backBtn()
         uploadProfilePic()
-
     }
 
     //get data from facebook if Logged in with Facebook
@@ -70,7 +66,7 @@ class ProfileActivity : BaseActivity() {
         }
         val parameters = Bundle()
 
-        parameters.putString("fields","id,name,link,picture.type(large),email")
+        parameters.putString("fields", "id,name,link,picture.type(large),email")
 
         request.parameters = parameters
         request.executeAsync()
@@ -96,44 +92,30 @@ class ProfileActivity : BaseActivity() {
     }
 
     // Back Button Function
-    private fun backBtn(){
-
+    private fun backBtn() {
         binding.backBtn.setOnClickListener {
-
             startActivity(Intent(this, HomeActivity::class.java))
             finish()
-
         }
-
     }
 
     //Logout Function
-    private fun logout(){
-
+    private fun logout() {
         binding.logoutBtn.setOnClickListener {
-
             LoginManager.getInstance().logOut()
             finish()
-
             startActivity(Intent(this, SignInActivity::class.java))
             finish()
         }
-
     }
 
-
     // Uploading Image from gallery
-    companion object{
+    companion object {
         val IMAGE_REQUEST_CODE = 100
     }
 
-    private fun uploadProfilePic(){
-
-        binding.profileImg.setOnClickListener {
-            pickImageGallery()
-
-        }
-
+    private fun uploadProfilePic() {
+        binding.profileImg.setOnClickListener { pickImageGallery() }
     }
 
     private fun pickImageGallery() {
@@ -144,20 +126,19 @@ class ProfileActivity : BaseActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK){
+        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK) {
 
             binding.profileImg.setImageURI(data?.data)
             imageUri = data?.data!!
-            storageReference = FirebaseStorage.getInstance().getReference("Users/"+auth.currentUser?.uid)
+            storageReference =
+                FirebaseStorage.getInstance().getReference("Users/" + auth.currentUser?.uid)
             storageReference.putFile(imageUri).addOnSuccessListener {
 
-                showToast(this,"Profile Picture Updated" )
+                showToast(this, "Profile Picture Updated")
 
             }.addOnFailureListener {
 
-                showToast(this,"Failed to Upload Image!! ")
-
-
+                showToast(this, "Failed to Upload Image!! ")
             }
         }
     }

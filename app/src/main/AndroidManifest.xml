@@ -20,6 +20,30 @@
             android:name=".Home.ProfileActivity"
             android:exported="false" />
         <activity
+            android:name=".home.AskExpertFragment"
+            android:exported="false" />
+        <activity
+            android:name=".diagnosisResult.DiagnosisResult"
+            android:exported="false" />
+        <activity
+            android:name=".diagnosisResult.ConfidencesResult"
+            android:exported="false" />
+        <activity
+            android:name=".recommendations.LightMeterFragment"
+            android:exported="false" />
+        <activity
+            android:name=".reminder.ReminderFragment"
+            android:exported="false" />
+        <activity
+            android:name=".search.SearchPlantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile.Feedback"
+            android:exported="false" />
+        <activity
+            android:name=".profile.NotificationSettingFragment"
+            android:exported="false" />
+        <activity
             android:name=".GetStarted"
             android:exported="true" >
             <intent-filter>
@@ -33,9 +57,6 @@
             android:name=".Home.HomeActivity"
             android:exported="false"
             />
-        <activity
-            android:name=".setting.SettingActivity"
-            android:exported="false" />
         <activity
             android:name=".SignInPhoneNumber"
             android:exported="false" />

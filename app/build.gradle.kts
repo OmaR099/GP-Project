@@ -37,6 +37,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        mlModelBinding = true
     }
 }
 
@@ -48,7 +49,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
-    implementation("com.google.firebase:firebase-auth:22.3.0")
+    implementation("com.google.firebase:firebase-auth:22.3.1")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("com.google.firebase:firebase-database:20.3.0")
     implementation ("com.facebook.android:facebook-android-sdk:latest.release")
@@ -61,4 +62,9 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     implementation ("de.hdodenhof:circleimageview:3.1.0")
+
+    implementation("org.tensorflow:tensorflow-lite-support:0.2.0")
+    implementation("org.tensorflow:tensorflow-lite-metadata:0.2.0")
+
+    implementation ("androidx.camera:camera-view:1.3.1")
 }

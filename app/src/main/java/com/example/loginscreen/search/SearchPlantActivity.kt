@@ -8,8 +8,8 @@ import com.example.loginscreen.databinding.ActivitySearchPlantBinding
 class SearchPlantActivity: AppCompatActivity() {
     private lateinit var binding: ActivitySearchPlantBinding
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         binding = ActivitySearchPlantBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

@@ -314,7 +314,7 @@
                         android:textStyle="bold"
                         app:layout_constraintEnd_toStartOf="@+id/iv_selected_full"
                         app:layout_constraintStart_toEndOf="@+id/full_iv"
-                        app:layout_constraintTop_toTopOf="0" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/full_tv2"

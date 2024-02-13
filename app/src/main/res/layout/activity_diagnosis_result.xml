@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:background="@drawable/shape_gradient_d9fff4_fefffe"
         app:layout_constraintDimensionRatio="375:240"
-        app:layout_constraintTop_toTopOf="0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/reli"
@@ -143,7 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text=""
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="17sp" />
         </LinearLayout>
 
