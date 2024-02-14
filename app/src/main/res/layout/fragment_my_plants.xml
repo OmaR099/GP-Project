@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_e5e5e5">
+
+    <View
+        android:id="@+id/top_View"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_gradient_d9fff4_fefffe"
+        app:layout_constraintDimensionRatio="375:240"
+        app:layout_constraintTop_toTopOf="0" />
+
+    <View
+        android:id="@+id/bottom_View"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/top_View" />
+
+    <View
+        android:id="@+id/v_line_plant_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_marginBottom="@dimen/x48"
+        app:layout_constraintBottom_toBottomOf="@+id/top_View" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x32"
+        android:text="@string/tab_myplants"
+        android:textColor="@color/color_0f4d2e"
+        android:textSize="@dimen/x52"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/myplants_sub_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x2"
+        android:layout_marginEnd="@dimen/x32"
+        android:text="@string/myplants1_new"
+        android:textColor="@color/color_62857a"
+        android:textSize="@dimen/x28"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="@+id/title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+
+    <ImageView
+        android:id="@+id/iv_setting"
+        android:layout_width="@dimen/x48"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x40"
+        android:layout_marginEnd="@dimen/x32"
+        android:adjustViewBounds="true"
+        android:src="@drawable/reminder_icon_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_tv" />
+
+    <ImageView
+        android:id="@+id/iv_premium"
+        android:layout_width="@dimen/x48"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x40"
+        android:layout_marginEnd="@dimen/x32"
+        android:adjustViewBounds="true"
+        android:src="@drawable/myplants_premium_icon"
+        app:layout_constraintRight_toLeftOf="@+id/iv_setting"
+        app:layout_constraintTop_toTopOf="@+id/title_tv" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_myplants"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x80"
+        android:layout_marginStart="@dimen/x24"
+        android:layout_marginTop="@dimen/x40"
+        android:layout_marginEnd="@dimen/x24"
+        android:background="@drawable/shape_solid_dff2ec_r_10"
+        app:layout_constraintTop_toBottomOf="@+id/myplants_sub_title_tv"
+        app:tabBackground="@color/transparent"
+        app:tabIndicator="@drawable/tab_indicator_my_plants"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="@dimen/x80"
+        app:tabMode="fixed"
+        app:tabRippleColor="@color/transparent"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextAppearance="@style/MyPlantsTabLayoutTextAppearance" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_myplants" />
+</androidx.constraintlayout.widget.ConstraintLayout>

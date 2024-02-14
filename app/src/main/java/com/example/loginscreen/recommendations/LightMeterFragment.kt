@@ -1,5 +1,6 @@
 package com.example.loginscreen.recommendations
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.ImageView
@@ -16,11 +17,18 @@ class LightMeterFragment : AppCompatActivity() {
 
 //        CallBacks
         close()
+        lightCameraBtn()
 
     }
 
     private fun close() {
         val closeBtn: ImageView = findViewById(R.id.close_btn)
         closeBtn.setOnClickListener { finish() }
+    }
+
+    private fun lightCameraBtn() {
+        binding.flLightMeter.setOnClickListener {
+            startActivity(Intent(this, LightMeterCamera::class.java))
+        }
     }
 }

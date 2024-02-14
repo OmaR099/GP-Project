@@ -2,6 +2,7 @@ package com.example.loginscreen.reminder
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.loginscreen.databinding.FragmentReminderBinding
 
@@ -12,6 +13,8 @@ class ReminderFragment:  AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = FragmentReminderBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.vsContainerEmpty.run { visibility = View.VISIBLE }
 
 //        CallBacks
 

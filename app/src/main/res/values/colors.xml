@@ -42,4 +42,10 @@
     <color name="grey">#2c2b2b</color>
     <color name="gl_text_color2">#666666</color>
     <color name="search_box">#68155c45</color>
+    <color name="color_ebf5f0">#ebf5f0</color>
+    <color name="color_519071">#519071</color>
+    <color name="color_39bf7c">#39bf7c</color>
+    <color name="color_083326">#083326</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_e5e5e5">#e5e5e5</color>
 </resources>

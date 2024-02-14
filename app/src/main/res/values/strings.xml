@@ -318,4 +318,26 @@
     <string name="suggestions">Suggestions</string>
     <string name="profile">Profile</string>
     <string name="weather">Weather</string>
+    <string name="healthresult_healthstatus_text_lookshealthy">Your plant looks healthy</string>
+    <string name="healthresult_healthstatus_text_noproblem">No issues detected</string>
+    <string name="healthresult_tab_text_info">Disease Info</string>
+    <string name="healthresult_tab_text_solutions">Solutions</string>
+    <string name="healthresult_tab_text_prevention">Prevention</string>
+    <string name="healthresult_text_retake">Retake</string>
+    <string name="healthresult_diseasesinfo_text_overview">Overview</string>
+    <string name="healthresult_diseasesinfo_text_symptom">Symptom</string>
+    <string name="healthresult_diseasesinfo_text_cause">Cause</string>
+    <string name="diagnose2_new">Having a plant emergency?</string>
+    <string name="diagnose1_new">Ask our experts and get quick, personalized solutions.</string>
+    <string name="plantdetailoverview_planthealth_text_askanexpert">Ask an expert\n</string>
+    <string name="text_diagnose">Diagnose</string>
+    <string name="diagnose3_new">Revive your plants with easy diagnosis</string>
+    <string name="lightmeter_text_dark">Dark</string>
+    <string name="lightmeter_text_fullsun">Full Sun</string>
+    <string name="lightmeter_text_accept">Accept Light Conditions</string>
+    <string name="text_allow_access">Allow Access</string>
+    <string name="lightmeter_text_cameraaccess">Aim the camera towards the natural light source for accurate metering.</string>
+    <string name="camera_text_allowaccess">Plant Parent would like to access the camera</string>
+    <string name="tab_myplants">My Plants</string>
+    <string name="myplants1_new">Keep your plants organized and happy</string>
 </resources>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="layout/fragment_light_meter_0">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/light_meter_cv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:background="@color/DarkGray"
+        android:focusable="true"
+        android:keepScreenOn="true"
+        app:autoFocus="true"
+        app:autoRotateOutputImage="true"
+        app:cameraAdjustType="fixWidth"
+        app:flash="off"
+        app:preferredPreviewFormat="NV21"
+        app:zoom="0.0f" />
+
+    <ImageView
+        android:id="@+id/iv_focus_circle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/light_meter_mask" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/x48"
+        android:layout_height="@dimen/x48"
+        android:layout_marginStart="@dimen/x32"
+        android:layout_marginTop="@dimen/x10"
+        android:src="@drawable/icon_close_common_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space" />
+
+    <ImageView
+        android:id="@+id/iv_camera_switcher"
+        android:layout_width="@dimen/x48"
+        android:layout_height="@dimen/x48"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginEnd="@dimen/x32"
+        android:src="@drawable/icon_switch_recognize"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space" />
+
+    <ImageView
+        android:id="@+id/iv_camera_tips"
+        android:layout_width="@dimen/x48"
+        android:layout_height="@dimen/x48"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginEnd="@dimen/x48"
+        android:src="@drawable/icon_camera_tips"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space" />
+
+    <TextView
+        android:id="@+id/tv_debug_light_lux"
+        android:layout_width="@dimen/x200"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="100"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x36"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_camera_tips" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x694"
+        android:background="@drawable/shape_rect_solid_white_top_r_10"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_light_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x64"
+            android:layout_marginTop="@dimen/x36"
+            android:text="@string/lightmeter_text_dark"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/x28"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x64"
+            android:text="@string/lightmeter_text_fullsun"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/x28"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_light_dark"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/light_progress_bar"
+            style="@style/LightProgressBarScale"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x48"
+            android:layout_marginStart="@dimen/x64"
+            android:layout_marginTop="@dimen/x16"
+            android:layout_marginEnd="@dimen/x64"
+            android:max="9"
+            android:progress="1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_light_dark"
+            app:layout_constraintVertical_bias="0.7" />
+
+        <FrameLayout
+            android:id="@+id/fl_tips_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x64"
+            app:layout_constraintStart_toStartOf="@+id/light_progress_bar"
+            app:layout_constraintTop_toBottomOf="@+id/light_progress_bar" />
+
+        <ImageView
+            android:id="@+id/iv_light_level_hint"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/x16"
+            android:src="@drawable/icon_expression_perfect"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/tv_light_level_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_light_level_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x64"
+            android:layout_marginEnd="@dimen/x64"
+            android:layout_marginBottom="@dimen/x24"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x32"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/tv_submit" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x92"
+            android:layout_marginStart="@dimen/x64"
+            android:layout_marginEnd="@dimen/x64"
+            android:layout_marginBottom="@dimen/x52"
+            android:background="@drawable/bg_common_btn"
+            android:gravity="center"
+            android:text="@string/lightmeter_text_accept"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x36"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_access_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/DarkGray"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="@dimen/x440"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/camera_text_allowaccess"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x36"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="@dimen/x590"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x48"
+                android:gravity="center_horizontal"
+                android:text="@string/lightmeter_text_cameraaccess"
+                android:textColor="@color/color_cccccc"
+                android:textSize="@dimen/x28" />
+
+            <TextView
+                android:id="@+id/btn_allow_access"
+                style="@style/NPText32"
+                android:layout_marginTop="@dimen/x80"
+                android:background="@drawable/shape_solid_white_r_64"
+                android:paddingStart="@dimen/x60"
+                android:paddingTop="@dimen/x24"
+                android:paddingEnd="@dimen/x60"
+                android:paddingBottom="@dimen/x24"
+                android:text="@string/text_allow_access"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_close_access"
+            android:layout_width="@dimen/x48"
+            android:layout_height="@dimen/x48"
+            android:layout_marginStart="@dimen/x32"
+            android:layout_marginTop="@dimen/x64"
+            android:src="@drawable/icon_close_common_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

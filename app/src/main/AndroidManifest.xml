@@ -32,6 +32,12 @@
             android:name=".recommendations.LightMeterFragment"
             android:exported="false" />
         <activity
+            android:name=".recommendations.LightMeterCamera"
+            android:exported="false" />
+        <activity
+            android:name=".myPlants.MyPlants"
+            android:exported="false" />
+        <activity
             android:name=".reminder.ReminderFragment"
             android:exported="false" />
         <activity
