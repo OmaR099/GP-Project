@@ -1,15 +1,14 @@
-package com.example.loginscreen.Home
+package com.example.loginscreen.home
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.Toast
+import com.example.loginscreen.Home.ProfileActivity
 import com.example.loginscreen.R
 import com.example.loginscreen.databinding.ActivityHomeBinding
 import com.example.loginscreen.diagnosisResult.DiagnosisResult
-import com.example.loginscreen.home.AskExpertFragment
+import com.example.loginscreen.myPlants.MyPlants
 import com.example.loginscreen.recommendations.LightMeterFragment
 import com.example.loginscreen.reminder.ReminderFragment
 import com.example.loginscreen.search.SearchPlantActivity
@@ -55,7 +54,7 @@ class HomeActivity : AppCompatActivity() {
         binding.bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.ic_profile -> startActivity(Intent(this, ProfileActivity::class.java))
-                R.id.my_plant -> Toast.makeText(this, "My plants", Toast.LENGTH_SHORT).show()
+                R.id.my_plant -> startActivity(Intent(this, MyPlants::class.java))
                 R.id.market -> Toast.makeText(this, "Market", Toast.LENGTH_SHORT).show()
                 R.id.home_menu -> Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show()
                 else -> {
