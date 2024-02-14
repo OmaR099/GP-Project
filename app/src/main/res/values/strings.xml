@@ -340,4 +340,20 @@
     <string name="camera_text_allowaccess">Plant Parent would like to access the camera</string>
     <string name="tab_myplants">My Plants</string>
     <string name="myplants1_new">Keep your plants organized and happy</string>
+    <string name="plantsetting_text_deleteplant">Delete This Plant</string>
+    <string name="plantsetting_text_plantheight">Plant height</string>
+    <string name="plantsetting_text_plantingtime">Planting time</string>
+    <string name="plantsetting_careschedule_tilte">Plant Care Schedule</string>
+    <string name="plantdetailoverview_text_carewater">Watering</string>
+    <string name="plantdetailplantinfo_fertilizing_title">Fertilizing</string>
+    <string name="plantdetail_changecaresheet_text_fertilizingtype">Fertilizing type</string>
+    <string name="plantsetting_careschedule_text_pruning">Pruning</string>
+    <string name="plantsetting_careschedule_text_misting">Misting</string>
+    <string name="plantsetting_careschedule_text_rotating">Rotating</string>
+    <string name="plantsettings_setsite_text">Set site</string>
+    <string name="plantsetting_sitecondition_text_site">Site</string>
+    <string name="plantsetting_pot_tilte">Pot</string>
+    <string name="plantsetting_pot_text_type">Type</string>
+    <string name="plantsetting_pot_text_size">Size</string>
+    <string name="plantsetting_pot_text_drainage">Drainage</string>
 </resources>

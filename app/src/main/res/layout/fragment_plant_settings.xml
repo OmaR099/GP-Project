@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GreyF5F8FA"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/navi_bar"
+        layout="@layout/layout_toolbar_new" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/x24"
+            android:paddingEnd="@dimen/x24"
+            android:paddingBottom="@dimen/x60">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x24"
+                android:background="@drawable/bg_plant_detail_item"
+                android:paddingStart="@dimen/x32"
+                android:paddingTop="@dimen/x32"
+                android:paddingEnd="@dimen/x32">
+
+                <FrameLayout
+                    android:id="@+id/fl_plant_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_plant_img"
+                        android:layout_width="@dimen/x200"
+                        android:layout_height="@dimen/x200"
+                        android:src="@drawable/common_background" />
+
+                    <ImageView
+                        android:layout_width="@dimen/x60"
+                        android:layout_height="@dimen/x60"
+                        android:layout_gravity="end|bottom"
+                        android:src="@drawable/icon_plantsettings_take_photo" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="@dimen/x54"
+                    android:layout_height="@dimen/x54"
+                    android:src="@drawable/icon_edit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_plant_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x24"
+                    android:ellipsize="end"
+                    android:lineHeight="@dimen/x44"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x40"
+                    android:textStyle="bold"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_edit"
+                    app:layout_constraintStart_toEndOf="@+id/fl_plant_img"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_edit" />
+
+                <TextView
+                    android:id="@+id/tv_plant_latin"
+                    android:layout_width="@dimen/x414"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x16"
+                    android:includeFontPadding="false"
+                    android:lineHeight="@dimen/x36"
+                    android:maxLines="1"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/x32"
+                    android:textStyle="italic"
+                    app:autoSizeMaxTextSize="@dimen/x32"
+                    app:autoSizeMinTextSize="@dimen/x24"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toStartOf="@+id/tv_plant_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_plant_name" />
+
+                <include
+                    android:id="@+id/divider_container1"
+                    layout="@layout/common_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x3"
+                    android:layout_marginTop="@dimen/x32"
+                    app:layout_constraintTop_toBottomOf="@+id/fl_plant_img" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/plant_height_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/icon_plant_height"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_container1"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantsetting_text_plantheight" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/planting_time_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:bottom_line_visible="false"
+                    app:icon="@drawable/icon_planting_time"
+                    app:layout_constraintTop_toBottomOf="@+id/plant_height_item"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantsetting_text_plantingtime" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x24"
+                android:background="@drawable/bg_plant_detail_item"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/x32"
+                android:paddingTop="@dimen/x32"
+                android:paddingEnd="@dimen/x32">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plantsetting_careschedule_tilte"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x36"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/watering_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/icon_plantsettings_water"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantdetailoverview_text_carewater" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/fertilizeing_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/icon_plantsettings_fertilizing"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantdetailplantinfo_fertilizing_title" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/fertilizeing_type_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/icon_fertilizing_type"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantdetail_changecaresheet_text_fertilizingtype" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/pruning_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/icon_pruning"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantsetting_careschedule_text_pruning" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/misting_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/icon_misting"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantsetting_careschedule_text_misting" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/rotating_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:bottom_line_visible="false"
+                    app:icon="@drawable/icon_rotate"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantsetting_careschedule_text_rotating" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x24"
+                android:background="@drawable/bg_plant_detail_item"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/x32"
+                android:paddingTop="@dimen/x32"
+                android:paddingEnd="@dimen/x32">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plantsettings_setsite_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x36"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/site_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:bottom_line_visible="false"
+                    app:icon="@drawable/icon_suitable"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantsetting_sitecondition_text_site" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x24"
+                android:background="@drawable/bg_plant_detail_item"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/x32"
+                android:paddingTop="@dimen/x32"
+                android:paddingEnd="@dimen/x32">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plantsetting_pot_tilte"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x36"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/pot_type_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/icon_pot_type"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantsetting_pot_text_type" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/pot_size_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/icon_pot_size"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantsetting_pot_text_size" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/pot_drainage_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:bottom_line_visible="false"
+                    app:icon="@drawable/icon_pot_drainage"
+                    app:right_info="@string/plantsetting_careschedule_text_select"
+                    app:title="@string/plantsetting_pot_text_drainage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_delete_this_plant"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x92"
+                android:layout_marginTop="@dimen/x24"
+                android:background="@drawable/shape_solid_white_r_64"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x48"
+                    android:layout_height="@dimen/x48"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_delete_plant" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x12"
+                    android:text="@string/plantsetting_text_deleteplant"
+                    android:textColor="#f56262"
+                    android:textSize="@dimen/x36"
+                    app:autoSizeMaxTextSize="@dimen/x36"
+                    app:autoSizeMinTextSize="@dimen/x24"
+                    app:autoSizeTextType="uniform" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

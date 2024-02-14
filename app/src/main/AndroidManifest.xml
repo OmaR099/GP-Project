@@ -38,6 +38,9 @@
             android:name=".myPlants.MyPlants"
             android:exported="false" />
         <activity
+            android:name=".myPlants.PlantSettings"
+            android:exported="false" />
+        <activity
             android:name=".reminder.ReminderFragment"
             android:exported="false" />
         <activity

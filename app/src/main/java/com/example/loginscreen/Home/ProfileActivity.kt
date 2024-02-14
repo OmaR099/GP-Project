@@ -2,15 +2,13 @@ package com.example.loginscreen.Home
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.Toast
-import com.bumptech.glide.Glide
 import com.example.loginscreen.BaseActivity
 import com.example.loginscreen.R
 import com.example.loginscreen.SignInActivity
 import com.example.loginscreen.databinding.ActivityProfileBinding
+import com.example.loginscreen.home.HomeActivity
 import com.facebook.AccessToken
 import com.facebook.GraphRequest
 import com.facebook.login.LoginManager
@@ -124,6 +122,7 @@ class ProfileActivity : BaseActivity() {
         startActivityForResult(intent, IMAGE_REQUEST_CODE)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK) {
