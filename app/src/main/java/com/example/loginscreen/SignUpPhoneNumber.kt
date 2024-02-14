@@ -1,17 +1,15 @@
 package com.example.loginscreen
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
-import com.example.loginscreen.Home.HomeActivity
+import com.example.loginscreen.home.HomeActivity
 import com.example.loginscreen.Home.User
 import com.example.loginscreen.databinding.ActivitySignUpPhoneNumberBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.storage.StorageReference
 
 class SignUpPhoneNumber : BaseActivity() {
 

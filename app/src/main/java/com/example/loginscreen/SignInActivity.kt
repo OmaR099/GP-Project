@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.loginscreen.Home.HomeActivity
+import com.example.loginscreen.home.HomeActivity
 import com.example.loginscreen.databinding.ActivitySignInBinding
 import com.facebook.AccessToken
 import com.facebook.CallbackManager
@@ -174,6 +174,7 @@ class SignInActivity : BaseActivity() {
             }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         callbackManager.onActivityResult(requestCode, resultCode, data)

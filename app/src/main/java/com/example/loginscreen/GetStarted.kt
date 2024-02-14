@@ -3,7 +3,6 @@ package com.example.loginscreen
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.loginscreen.Home.HomeActivity
 import com.example.loginscreen.databinding.ActivityGetStartedBinding
 
 class GetStarted : AppCompatActivity() {
