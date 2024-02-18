@@ -107,17 +107,14 @@
                     android:layout_height="wrap_content"
                     app:icon="@drawable/icon_plant_height"
                     app:layout_constraintTop_toBottomOf="@+id/divider_container1"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantsetting_text_plantheight" />
 
                 <com.google.android.material.tabs.TabItem
                     android:id="@+id/planting_time_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:bottom_line_visible="false"
                     app:icon="@drawable/icon_planting_time"
                     app:layout_constraintTop_toBottomOf="@+id/plant_height_item"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantsetting_text_plantingtime" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -144,7 +141,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:icon="@drawable/icon_plantsettings_water"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantdetailoverview_text_carewater" />
 
                 <com.google.android.material.tabs.TabItem
@@ -152,7 +148,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:icon="@drawable/icon_plantsettings_fertilizing"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantdetailplantinfo_fertilizing_title" />
 
                 <com.google.android.material.tabs.TabItem
@@ -160,7 +155,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:icon="@drawable/icon_fertilizing_type"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantdetail_changecaresheet_text_fertilizingtype" />
 
                 <com.google.android.material.tabs.TabItem
@@ -168,7 +162,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:icon="@drawable/icon_pruning"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantsetting_careschedule_text_pruning" />
 
                 <com.google.android.material.tabs.TabItem
@@ -176,16 +169,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:icon="@drawable/icon_misting"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantsetting_careschedule_text_misting" />
 
                 <com.google.android.material.tabs.TabItem
                     android:id="@+id/rotating_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:bottom_line_visible="false"
                     app:icon="@drawable/icon_rotate"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantsetting_careschedule_text_rotating" />
             </LinearLayout>
 
@@ -211,9 +201,7 @@
                     android:id="@+id/site_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:bottom_line_visible="false"
                     app:icon="@drawable/icon_suitable"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantsetting_sitecondition_text_site" />
             </LinearLayout>
 
@@ -240,7 +228,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:icon="@drawable/icon_pot_type"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantsetting_pot_text_type" />
 
                 <com.google.android.material.tabs.TabItem
@@ -248,16 +235,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:icon="@drawable/icon_pot_size"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantsetting_pot_text_size" />
 
                 <com.google.android.material.tabs.TabItem
                     android:id="@+id/pot_drainage_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:bottom_line_visible="false"
                     app:icon="@drawable/icon_pot_drainage"
-                    app:right_info="@string/plantsetting_careschedule_text_select"
                     app:title="@string/plantsetting_pot_text_drainage" />
             </LinearLayout>
 

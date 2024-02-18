@@ -11,14 +11,14 @@
         android:layout_height="0dp"
         android:background="@drawable/shape_gradient_d9fff4_fefffe"
         app:layout_constraintDimensionRatio="375:240"
-        app:layout_constraintTop_toTopOf="0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/bottom_View"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/top_View" />
 
     <View
@@ -33,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/x32"
+        android:layout_marginTop="16dp"
         android:text="@string/tab_myplants"
         android:textColor="@color/color_0f4d2e"
         android:textSize="@dimen/x52"
@@ -50,7 +51,7 @@
         android:textColor="@color/color_62857a"
         android:textSize="@dimen/x28"
         app:layout_constrainedWidth="true"
-        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/title_tv"
         app:layout_constraintTop_toBottomOf="@+id/title_tv" />
 
@@ -58,7 +59,7 @@
         android:id="@+id/iv_setting"
         android:layout_width="@dimen/x48"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/x40"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="@dimen/x32"
         android:adjustViewBounds="true"
         android:src="@drawable/reminder_icon_setting"
@@ -69,8 +70,8 @@
         android:id="@+id/iv_premium"
         android:layout_width="@dimen/x48"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/x40"
-        android:layout_marginEnd="@dimen/x32"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
         android:adjustViewBounds="true"
         android:src="@drawable/myplants_premium_icon"
         app:layout_constraintRight_toLeftOf="@+id/iv_setting"

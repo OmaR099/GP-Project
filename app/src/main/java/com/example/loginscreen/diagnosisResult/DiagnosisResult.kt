@@ -10,7 +10,6 @@ import android.graphics.drawable.BitmapDrawable
 import android.media.ThumbnailUtils
 import android.net.Uri
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.provider.MediaStore
 import android.view.View
 import android.widget.Button
@@ -22,20 +21,29 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.loginscreen.R
 import com.example.loginscreen.databinding.ActivityDiagnosisResultBinding
 import com.example.loginscreen.ml.DiseaseDetection
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
+import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 
+
 class DiagnosisResult : AppCompatActivity() {
     private lateinit var binding: ActivityDiagnosisResultBinding
+    private lateinit var auth: FirebaseAuth
+    private lateinit var reference: DatabaseReference
     private var conf = ""
-    var result: TextView? = null
+    private lateinit var byteArray: ByteArray
+    private var modelResult = ""
+    private var result: TextView? = null
     private lateinit var confidence: TextView
-    var imageView: ImageView? = null
-    lateinit var picture: Button
-    var imageSize = 224
+    private var imageView: ImageView? = null
+    private lateinit var picture: Button
+    private var imageSize = 224
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +53,24 @@ class DiagnosisResult : AppCompatActivity() {
         confidence = findViewById(R.id.confidence)
         imageView = findViewById(R.id.imageView)
         picture = findViewById(R.id.button1)
+
+//        firebase
+        auth = FirebaseAuth.getInstance()
+
+
+        binding.classified.setOnClickListener {
+
+        val plantName: String = binding.result1.text.toString()
+
+            binding.classified.text = plantName
+
+        if (plantName.isNotEmpty()) {
+            readData(plantName)
+        } else {
+            Toast.makeText(this, "PLease Enter Username", Toast.LENGTH_SHORT).show()
+        }
+
+        }
 
 //        Start Camera
         picture.setOnClickListener(View.OnClickListener {
@@ -72,11 +98,13 @@ class DiagnosisResult : AppCompatActivity() {
             return@setOnLongClickListener true
         }
 
-        binding.confidencesText.setOnClickListener {
-            intent = Intent(this, ConfidencesResult::class.java)
-            intent.putExtra("confidences", conf)
-            startActivity(intent)
-        }
+//        binding.confidencesText.setOnClickListener {
+//            intent = Intent(this, Result::class.java)
+//            intent.putExtra("confidences", conf)
+//            intent.putExtra("result", modelResult)
+//            intent.putExtra("image", byteArray)
+//            startActivity(intent)
+//        }
     }
 
     private fun classifyImage(image: Bitmap) {
@@ -125,6 +153,7 @@ class DiagnosisResult : AppCompatActivity() {
                 "Tomato healthy"
             )
             result!!.text = classes[maxPos]
+            modelResult = classes[maxPos]
             var s = ""
             for (i in classes.indices) {
                 s += String.format("%s: %.1f%%\n", classes[i], confidences[i] * 100)
@@ -147,7 +176,17 @@ class DiagnosisResult : AppCompatActivity() {
             imageView!!.setImageBitmap(image)
             image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false)
             classifyImage(image)
+
+            val byteArrayOutputStream = ByteArrayOutputStream()
+            image.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
+            byteArray = byteArrayOutputStream.toByteArray()
         }
+
+        intent = Intent(this, Result::class.java)
+        intent.putExtra("confidences", conf)
+        intent.putExtra("result", modelResult)
+        intent.putExtra("image", byteArray)
+        startActivity(intent)
         super.onActivityResult(requestCode, resultCode, data)
     }
 
@@ -195,5 +234,21 @@ class DiagnosisResult : AppCompatActivity() {
             }
         }
         return null
+    }
+
+    private fun readData(plantName: String) {
+
+        reference = FirebaseDatabase.getInstance().getReference("Plants")
+        reference.child(plantName).get().addOnSuccessListener {
+
+            if (it.exists()) {
+                val overView = it.child("overview").value
+                Toast.makeText(this, "Data Read Successfully", Toast.LENGTH_SHORT).show()
+                binding.clickHere.text = overView.toString()
+
+            } else {
+                Toast.makeText(this, "Plant Doesn't Exist", Toast.LENGTH_SHORT).show()
+            }
+        }.addOnFailureListener { Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show() }
     }
 }

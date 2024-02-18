@@ -356,4 +356,6 @@
     <string name="plantsetting_pot_text_type">Type</string>
     <string name="plantsetting_pot_text_size">Size</string>
     <string name="plantsetting_pot_text_drainage">Drainage</string>
+    <string name="disease">Disease</string>
+    <string name="confidences">Confidences</string>
 </resources>

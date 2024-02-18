@@ -55,6 +55,7 @@ dependencies {
     implementation ("com.facebook.android:facebook-android-sdk:latest.release")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation("com.google.firebase:firebase-storage")
+    implementation("com.google.firebase:firebase-core:21.1.1")
 
 
     testImplementation("junit:junit:4.13.2")

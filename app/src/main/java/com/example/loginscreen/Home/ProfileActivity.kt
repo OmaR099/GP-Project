@@ -1,4 +1,4 @@
-package com.example.loginscreen.Home
+package com.example.loginscreen.home
 
 import android.content.Intent
 import android.net.Uri
@@ -8,7 +8,8 @@ import com.example.loginscreen.BaseActivity
 import com.example.loginscreen.R
 import com.example.loginscreen.SignInActivity
 import com.example.loginscreen.databinding.ActivityProfileBinding
-import com.example.loginscreen.home.HomeActivity
+import com.example.loginscreen.profile.Feedback
+import com.example.loginscreen.profile.NotificationSettingFragment
 import com.facebook.AccessToken
 import com.facebook.GraphRequest
 import com.facebook.login.LoginManager
@@ -48,6 +49,8 @@ class ProfileActivity : BaseActivity() {
         // Functions Calls
         logout()
         backBtn()
+        notification()
+        feedback()
         uploadProfilePic()
     }
 
@@ -92,8 +95,13 @@ class ProfileActivity : BaseActivity() {
     // Back Button Function
     private fun backBtn() {
         binding.backBtn.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
             finish()
+        }
+    }
+
+    private fun feedback() {
+        binding.feedbackBtn.setOnClickListener {
+            startActivity(Intent(this, Feedback::class.java))
         }
     }
 
@@ -140,5 +148,10 @@ class ProfileActivity : BaseActivity() {
                 showToast(this, "Failed to Upload Image!! ")
             }
         }
+    }
+
+    private fun notification() {
+        binding.notificationBtn.setOnClickListener {
+            startActivity(Intent(this, NotificationSettingFragment::class.java)) }
     }
 }

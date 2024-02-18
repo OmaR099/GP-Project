@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/fefffe">
 
+
     <View
         android:id="@+id/top_View"
         android:layout_width="match_parent"
@@ -147,10 +148,5 @@
                 android:textSize="17sp" />
         </LinearLayout>
 
-        <FrameLayout
-            android:id="@+id/confidence_holder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true" />
     </RelativeLayout>
 </RelativeLayout>

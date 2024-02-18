@@ -1,4 +1,4 @@
-package com.example.loginscreen.Home
+package com.example.loginscreen.home
 
 data class User(
     var name: String ?= null,

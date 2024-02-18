@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
 import com.example.loginscreen.home.HomeActivity
-import com.example.loginscreen.Home.User
+import com.example.loginscreen.home.User
 import com.example.loginscreen.databinding.ActivitySignUpPhoneNumberBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference

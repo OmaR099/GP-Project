@@ -4,11 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.loginscreen.Home.ProfileActivity
+import com.example.loginscreen.home.ProfileActivity
 import com.example.loginscreen.R
 import com.example.loginscreen.databinding.ActivityHomeBinding
 import com.example.loginscreen.diagnosisResult.DiagnosisResult
 import com.example.loginscreen.myPlants.MyPlants
+import com.example.loginscreen.profile.NotificationSettingFragment
 import com.example.loginscreen.recommendations.LightMeterFragment
 import com.example.loginscreen.reminder.ReminderFragment
 import com.example.loginscreen.search.SearchPlantActivity
@@ -22,11 +23,13 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
     // CallBacks
         profileBtn()
-        cameraBtn()
         searchBtn()
+        notification()
         askExpert()
         reminder()
         weather()
+
+        binding.bottomNavigation.background = null
 
     }
 
@@ -46,15 +49,18 @@ class HomeActivity : AppCompatActivity() {
         binding.searchBtn.setOnClickListener { startActivity(Intent(this, SearchPlantActivity::class.java)) }
     }
 
-    private fun cameraBtn() {
-        binding.cameraBt.setOnClickListener { startActivity(Intent(this, DiagnosisResult::class.java)) }
+    private fun notification() {
+        binding.imageView6.setOnClickListener { startActivity(Intent(this, NotificationSettingFragment::class.java)) }
     }
+
+
 
     private fun profileBtn() {
         binding.bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.ic_profile -> startActivity(Intent(this, ProfileActivity::class.java))
                 R.id.my_plant -> startActivity(Intent(this, MyPlants::class.java))
+                R.id.ic_camera -> startActivity(Intent(this, DiagnosisResult::class.java))
                 R.id.market -> Toast.makeText(this, "Market", Toast.LENGTH_SHORT).show()
                 R.id.home_menu -> Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show()
                 else -> {

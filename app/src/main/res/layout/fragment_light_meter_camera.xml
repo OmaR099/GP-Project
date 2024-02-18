@@ -12,13 +12,7 @@
         android:adjustViewBounds="true"
         android:background="@color/DarkGray"
         android:focusable="true"
-        android:keepScreenOn="true"
-        app:autoFocus="true"
-        app:autoRotateOutputImage="true"
-        app:cameraAdjustType="fixWidth"
-        app:flash="off"
-        app:preferredPreviewFormat="NV21"
-        app:zoom="0.0f" />
+        android:keepScreenOn="true" />
 
     <ImageView
         android:id="@+id/iv_focus_circle"

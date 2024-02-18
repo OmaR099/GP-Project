@@ -17,7 +17,7 @@
         android:theme="@style/Theme.LoginScreen"
         tools:targetApi="31">
         <activity
-            android:name=".Home.ProfileActivity"
+            android:name=".home.ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".home.AskExpertFragment"
@@ -51,6 +51,9 @@
             android:exported="false" />
         <activity
             android:name=".profile.NotificationSettingFragment"
+            android:exported="false" />
+        <activity
+            android:name=".diagnosisResult.Result"
             android:exported="false" />
         <activity
             android:name=".GetStarted"

@@ -8,13 +8,14 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/my_plant"
-        android:icon="@drawable/ic_plant2"
+        android:icon="@drawable/custom_home_menu_my_plant"
         android:title="@string/plants"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/ic_camera"
-        android:enabled="false"
-        android:title=""
+        android:enabled="true"
+        android:icon="@drawable/custom_home_menu_health"
+        android:title="@string/disease"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/market"
