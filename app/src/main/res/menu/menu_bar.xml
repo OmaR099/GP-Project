@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/home_menu"
-        android:icon="@drawable/bottom_btn1"
+        android:icon="@drawable/custom_home_menu_home"
         android:title="@string/home"
         app:showAsAction="ifRoom" />
     <item
@@ -19,7 +19,7 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/market"
-        android:icon="@drawable/ic_cart"
+        android:icon="@drawable/custom_home_menu_market"
         android:title="@string/market"
         app:showAsAction="ifRoom" />
     <item

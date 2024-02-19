@@ -27,16 +27,43 @@
                 android:scaleType="fitXY"
                 app:shapeAppearanceOverlay="@style/roundimageview"/>
 
-            <TextView
-                android:id="@+id/disease_title"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/disease_title_container"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="@dimen/x48"
-                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_diagnose_content_item"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/x40"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgPlantDiseaseImgSmall" />
+                app:layout_constraintTop_toBottomOf="@+id/imgPlantDiseaseImgSmall">
+
+                <TextView
+                    android:id="@+id/disease_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x48"
+                    android:layout_marginTop="@dimen/x16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:paddingStart="@dimen/x32"
+                    android:paddingTop="@dimen/x40"
+                    android:paddingEnd="@dimen/x32"
+                    android:paddingBottom="@dimen/x40"
+                    android:text="@string/click_on_the_result_for_more_information"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/btn_retake"
@@ -63,7 +90,7 @@
                 android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/disease_title">
+                app:layout_constraintTop_toBottomOf="@+id/disease_title_container">
 
                 <LinearLayout
                     android:layout_width="match_parent"

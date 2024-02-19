@@ -358,4 +358,9 @@
     <string name="plantsetting_pot_text_drainage">Drainage</string>
     <string name="disease">Disease</string>
     <string name="confidences">Confidences</string>
+    <string name="lightmeter_text_lightmetertips">Place phone near your plant and aim your camera toward its natural light source</string>
+    <string name="health_text_autodiagnose">Auto-Diagnose</string>
+    <string name="diagnose_gettheirhealthback_text">Help your plants get their health back</string>
+    <string name="diagnose_diagnosesickplant_text">Diagnose sick plant</string>
+    <string name="click_on_the_result_for_more_information">Click on the result for more information</string>
 </resources>

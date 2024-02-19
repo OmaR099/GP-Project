@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_plant_detail_item"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/x140"
+        android:layout_height="@dimen/x140"
+        android:layout_marginTop="@dimen/x48"
+        android:src="@drawable/icon_light_meter_tips" />
+
+    <TextView
+        android:layout_width="@dimen/x540"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/x56"
+        android:layout_marginTop="@dimen/x24"
+        android:layout_marginEnd="@dimen/x56"
+        android:layout_marginBottom="@dimen/x48"
+        android:gravity="center_horizontal"
+        android:text="@string/lightmeter_text_lightmetertips"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x32" />
+
+    <TextView
+        android:id="@+id/light_tips_close"
+        android:layout_width="@dimen/x364"
+        android:layout_height="@dimen/y82"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y40"
+        android:layout_marginBottom="@dimen/y58"
+        android:background="@drawable/md5_8e233dfc6206f16debd671b8049562d0"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/tips_memo1000_btn"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+</LinearLayout>

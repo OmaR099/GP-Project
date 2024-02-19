@@ -20,7 +20,10 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.loginscreen.R
 import com.example.loginscreen.databinding.ActivityDiagnosisResultBinding
+import com.example.loginscreen.databinding.FragmentDiagnoseBinding
+import com.example.loginscreen.home.SnapTips
 import com.example.loginscreen.ml.DiseaseDetection
+import com.example.loginscreen.recommendations.LightTipsFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -33,47 +36,25 @@ import java.nio.ByteOrder
 
 
 class DiagnosisResult : AppCompatActivity() {
-    private lateinit var binding: ActivityDiagnosisResultBinding
-    private lateinit var auth: FirebaseAuth
-    private lateinit var reference: DatabaseReference
+    private lateinit var binding: FragmentDiagnoseBinding
     private var conf = ""
     private lateinit var byteArray: ByteArray
     private var modelResult = ""
     private var result: TextView? = null
-    private lateinit var confidence: TextView
-    private var imageView: ImageView? = null
-    private lateinit var picture: Button
     private var imageSize = 224
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDiagnosisResultBinding.inflate(layoutInflater)
+        binding = FragmentDiagnoseBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        result = findViewById(R.id.result1)
-        confidence = findViewById(R.id.confidence)
-        imageView = findViewById(R.id.imageView)
-        picture = findViewById(R.id.button1)
+
+
+        openSnapTips()
 
 //        firebase
-        auth = FirebaseAuth.getInstance()
-
-
-        binding.classified.setOnClickListener {
-
-        val plantName: String = binding.result1.text.toString()
-
-            binding.classified.text = plantName
-
-        if (plantName.isNotEmpty()) {
-            readData(plantName)
-        } else {
-            Toast.makeText(this, "PLease Enter Username", Toast.LENGTH_SHORT).show()
-        }
-
-        }
 
 //        Start Camera
-        picture.setOnClickListener(View.OnClickListener {
+        binding.autoDiagnoseView.setOnClickListener(View.OnClickListener {
             // Launch camera if we have permission
             if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
                 val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
@@ -83,20 +64,6 @@ class DiagnosisResult : AppCompatActivity() {
                 requestPermissions(arrayOf(Manifest.permission.CAMERA), 100)
             }
         })
-//    Google Search
-        binding.result1.setOnClickListener {
-            val intent = Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("https://www.google.com/search?q=${binding.result1.text}")
-            )
-            startActivity(intent)
-        }
-
-        // download image with long press on it
-        binding.imageView.setOnLongClickListener {
-            requestPermissionLauncher.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-            return@setOnLongClickListener true
-        }
 
 //        binding.confidencesText.setOnClickListener {
 //            intent = Intent(this, Result::class.java)
@@ -152,13 +119,11 @@ class DiagnosisResult : AppCompatActivity() {
                 "Tomato Tomato YellowLeaf Curl_Virus",
                 "Tomato healthy"
             )
-            result!!.text = classes[maxPos]
             modelResult = classes[maxPos]
             var s = ""
             for (i in classes.indices) {
                 s += String.format("%s: %.1f%%\n", classes[i], confidences[i] * 100)
             }
-            confidence.text = s
             conf = s
 
             // Releases model resources if no longer used.
@@ -173,7 +138,6 @@ class DiagnosisResult : AppCompatActivity() {
             var image = data!!.extras!!["data"] as Bitmap?
             val dimension = Math.min(image!!.width, image.height)
             image = ThumbnailUtils.extractThumbnail(image, dimension, dimension)
-            imageView!!.setImageBitmap(image)
             image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false)
             classifyImage(image)
 
@@ -190,65 +154,15 @@ class DiagnosisResult : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
     }
 
-    //download image to device
-    private val requestPermissionLauncher =
-        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
-            if (isGranted) {
-                AlertDialog.Builder(this).setTitle("Download Image?")
-                    .setMessage("Do you want to download this image to your device?")
-                    .setPositiveButton("Yes") { _, _ ->
-                        val drawable: BitmapDrawable = binding.imageView.drawable as BitmapDrawable
-                        val bitmap = drawable.bitmap
-                        downloadImage(bitmap)
-                    }
-                    .setNegativeButton("No") { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    .show()
-            } else {
-                Toast.makeText(this, "Please allow permission to download image", Toast.LENGTH_LONG)
-                    .show()
-            }
-        }
+    private fun openSnapTips() {
 
-    //fun that take bitmap and save it in device
-    private fun downloadImage(mBitmap: Bitmap): Uri? {
-        val contentValues = ContentValues().apply {
-            put(
-                MediaStore.Images.Media.DISPLAY_NAME,
-                "Birds_Images" + System.currentTimeMillis() / 1000
-            )
-            put(MediaStore.Images.Media.MIME_TYPE, "image/png")
+        binding.tipsBtn.setOnClickListener {
+            val snapTipsFragment = SnapTips()
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.snapTips_container, snapTipsFragment)
+                .addToBackStack(null)
+                .commit()
         }
-        val uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-        if (uri != null) {
-            contentResolver.insert(uri, contentValues)?.also {
-                contentResolver.openOutputStream(it).use { outputStream ->
-                    if (!mBitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream!!)) {
-                        throw IOException("Couldn't Save the bitmap")
-                    } else {
-                        Toast.makeText(applicationContext, "Image Saved", Toast.LENGTH_SHORT).show()
-                    }
-                }
-                return it
-            }
-        }
-        return null
     }
 
-    private fun readData(plantName: String) {
-
-        reference = FirebaseDatabase.getInstance().getReference("Plants")
-        reference.child(plantName).get().addOnSuccessListener {
-
-            if (it.exists()) {
-                val overView = it.child("overview").value
-                Toast.makeText(this, "Data Read Successfully", Toast.LENGTH_SHORT).show()
-                binding.clickHere.text = overView.toString()
-
-            } else {
-                Toast.makeText(this, "Plant Doesn't Exist", Toast.LENGTH_SHORT).show()
-            }
-        }.addOnFailureListener { Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show() }
-    }
 }
