@@ -35,6 +35,9 @@
             android:name=".diagnosisResult.DiagnosisResult"
             android:exported="false" />
         <activity
+            android:name=".diagnosisResult.LeavesCategory"
+            android:exported="false" />
+        <activity
             android:name=".recommendations.LightMeterFragment"
             android:exported="false" />
         <activity

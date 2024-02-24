@@ -171,4 +171,8 @@
     <string name="wind">Wind</string>
     <string name="sunset">Sunset</string>
     <string name="sunrise">Sunrise</string>
+    <string name="tomato">Tomato</string>
+    <string name="grape">Grape</string>
+    <string name="corn">Corn</string>
+    <string name="apple">Apple</string>
 </resources>

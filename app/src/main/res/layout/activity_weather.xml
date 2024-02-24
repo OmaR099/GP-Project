@@ -44,6 +44,13 @@
                 tools:text="23 February 2024, 6:10 PM" />
         </LinearLayout>
 
+        <ImageView
+            android:layout_width="@dimen/x360"
+            android:layout_height="@dimen/x360"
+            android:src="@drawable/ic_weather"
+            android:layout_above="@+id/overviewContainer"
+            android:layout_centerHorizontal="true"/>
+
 
         <LinearLayout
             android:id="@+id/overviewContainer"

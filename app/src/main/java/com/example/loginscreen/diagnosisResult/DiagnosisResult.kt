@@ -27,7 +27,6 @@ class DiagnosisResult : AppCompatActivity() {
     private var conf = ""
     private lateinit var byteArray: ByteArray
     private var modelResult = ""
-    private var result: TextView? = null
     private var imageSize = 224
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,8 +34,9 @@ class DiagnosisResult : AppCompatActivity() {
         binding = FragmentDiagnoseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+//      callbacks
         openSnapTips()
+        leaves()
 
 //        firebase
 
@@ -151,5 +151,8 @@ class DiagnosisResult : AppCompatActivity() {
                 .commit()
         }
     }
+
+    private fun leaves(){binding.leavesCv.setOnClickListener {
+        startActivity(Intent(this, LeavesCategory::class.java)) }}
 
 }
