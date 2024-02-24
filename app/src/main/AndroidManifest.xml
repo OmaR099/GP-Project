@@ -3,8 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-feature android:name="android.hardware.camera.any"/>
     <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <application
         android:allowBackup="true"
@@ -26,13 +35,13 @@
             android:name=".diagnosisResult.DiagnosisResult"
             android:exported="false" />
         <activity
-            android:name=".diagnosisResult.ConfidencesResult"
-            android:exported="false" />
-        <activity
             android:name=".recommendations.LightMeterFragment"
             android:exported="false" />
         <activity
             android:name=".recommendations.LightMeterCamera"
+            android:exported="false" />
+        <activity
+            android:name=".home.Weather"
             android:exported="false" />
         <activity
             android:name=".myPlants.MyPlants"

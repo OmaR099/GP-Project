@@ -13,9 +13,8 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/ic_camera"
-        android:enabled="true"
         android:icon="@drawable/custom_home_menu_health"
-        android:title="@string/disease"
+        android:title="@string/text_diagnose"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/market"

@@ -27,6 +27,7 @@ class HomeActivity : AppCompatActivity() {
         notification()
         askExpert()
         reminder()
+        lightMeter()
         weather()
 
         binding.bottomNavigation.background = null
@@ -34,7 +35,11 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun weather() {
-        binding.weatherBtn.setOnClickListener { startActivity(Intent(this, LightMeterFragment::class.java)) }
+        binding.weatherBtn.setOnClickListener { startActivity(Intent(this, Weather::class.java)) }
+    }
+
+    private fun lightMeter() {
+        binding.lightBtn.setOnClickListener { startActivity(Intent(this, LightMeterFragment::class.java)) }
     }
 
     private fun reminder() {

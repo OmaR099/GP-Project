@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
     android:fitsSystemWindows="true">
 
     <androidx.appcompat.widget.Toolbar
@@ -28,7 +27,7 @@
             android:layout_marginStart="@dimen/y100"
             android:ellipsize="end"
             android:singleLine="true"
-            android:text="@string/light_conditions"
+            android:text="@string/weather"
             android:visibility="visible" />
     </androidx.appcompat.widget.Toolbar>
 </com.google.android.material.appbar.AppBarLayout>

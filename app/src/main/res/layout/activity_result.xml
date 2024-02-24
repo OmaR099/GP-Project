@@ -24,8 +24,18 @@
                 android:layout_height="@dimen/x400"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="fitXY"
-                app:shapeAppearanceOverlay="@style/roundimageview"/>
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:id="@+id/rounded_shape"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="185dp"
+                android:background="@drawable/bg_diagnose_top"
+                app:layout_constraintBottom_toTopOf="@+id/disease_title_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imgPlantDiseaseImgSmall"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:id="@+id/disease_title_container"
@@ -36,9 +46,8 @@
                 android:background="@drawable/bg_diagnose_content_item"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="@dimen/x40"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgPlantDiseaseImgSmall">
+                app:layout_constraintTop_toBottomOf="@+id/rounded_shape">
 
                 <TextView
                     android:id="@+id/disease_title"

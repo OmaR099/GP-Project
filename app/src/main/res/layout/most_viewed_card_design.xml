@@ -1,32 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="@dimen/x300"
+    android:layout_height="@dimen/x300"
     android:layout_margin="7dp"
     app:cardCornerRadius="10dp"
     app:cardElevation="3dp">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/mv_image"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/x300"
+            android:layout_height="@dimen/x300"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="11dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/apple" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/md5_c15683abf408db0464e68007061d6691" />
+
+        <TextView
+            android:id="@+id/mv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@+id/mv_image"
+            android:fontFamily="@font/baloo"
+            android:text="Apple tree"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mv_title"
+            app:layout_constraintStart_toStartOf="@+id/mv_image" />
 
         <TextView
             android:id="@+id/mv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
             android:layout_toEndOf="@+id/mv_image"
             android:fontFamily="@font/baloo"
             android:text="Apple tree"
-            android:textSize="20sp" />
-    </RelativeLayout>
+            android:textColor="@color/color_232323"
+            android:textSize="12sp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/mv_image"
+            app:layout_constraintStart_toStartOf="@+id/mv_image"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
