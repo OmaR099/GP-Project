@@ -4,10 +4,12 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/>
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <uses-feature android:name="android.hardware.camera" android:required="true"/>
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -25,8 +27,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginScreen"
         tools:targetApi="31">
+        <receiver
+            android:name=".reminder.Notification"
+            android:enabled="true"/>
         <activity
             android:name=".home.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reminder.ReminderSetting"
             android:exported="false" />
         <activity
             android:name=".home.AskExpertFragment"
@@ -36,6 +44,9 @@
             android:exported="false" />
         <activity
             android:name=".diagnosisResult.LeavesCategory"
+            android:exported="false" />
+        <activity
+            android:name=".diagnosisResult.UploadImage"
             android:exported="false" />
         <activity
             android:name=".recommendations.LightMeterFragment"
@@ -79,10 +90,15 @@
         </activity>
         <activity
             android:name=".home.HomeActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".SignInPhoneNumber"
+            android:exported="false" />
+        <activity
+            android:name=".categories.CategoryResult"
+            android:exported="false" />
+        <activity
+            android:name=".categories.Fruits"
             android:exported="false" />
         <activity
             android:name=".SignUpPhoneNumber"

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_green"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_22sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/shape_solid_f2f2f2"
+        android:queryBackground="@null"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search"
+        android:searchIcon="@drawable/ic_search"
+        android:theme="@style/ThemeOverlay.search" />
+
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:text="@string/searchplant_text_cancel"
+            android:textColor="@color/add_button"
+            android:layout_toEndOf="@+id/search_view"
+            android:textSize="16sp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y24"
+        android:orientation="vertical"
+        android:layout_below="@+id/search_view"
+        android:paddingStart="@dimen/x32"
+        android:paddingEnd="@dimen/x32"
+        tools:listitem="@layout/list_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+</RelativeLayout>

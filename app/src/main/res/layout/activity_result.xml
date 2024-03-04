@@ -21,7 +21,7 @@
                 android:id="@+id/imgPlantDiseaseImgSmall"
                 android:layout_width="match_parent"
                 android:adjustViewBounds="true"
-                android:layout_height="@dimen/x400"
+                android:layout_height="@dimen/x600"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:scaleType="fitXY" />
@@ -30,7 +30,7 @@
                 android:id="@+id/rounded_shape"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginTop="185dp"
+                android:layout_marginTop="285dp"
                 android:background="@drawable/bg_diagnose_top"
                 app:layout_constraintBottom_toTopOf="@+id/disease_title_container"
                 app:layout_constraintEnd_toEndOf="parent"

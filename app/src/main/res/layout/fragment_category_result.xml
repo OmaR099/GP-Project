@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_green"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/first_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                android:background="@color/background_green"
+                android:elevation="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/_9sdp"
+                    android:layout_marginEnd="@dimen/_17sdp"
+                    android:background="@color/background_green">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_image_view_background"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/circle_image_background" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgPlant"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/banana" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/circle_image_frame"
+                        android:layout_gravity="center" />
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/desc_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    tools:text="Fruit"
+                    android:layout_below="@+id/imgClose"/>
+
+                <TextView
+                    android:id="@+id/name_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/desc_title"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/acme"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    tools:text="Apple" />
+
+                <ImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:src="@drawable/back_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/grey" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sec_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/_8sdp"
+                android:padding="@dimen/_16sdp"
+                android:background="@color/background_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/first_view">
+
+                <LinearLayout
+                    android:id="@+id/ll_overview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/x48"
+                        android:layout_height="@dimen/x48"
+                        android:src="@drawable/icon_info_overview" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x16"
+                        android:text="@string/healthresult_diseasesinfo_text_overview"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/acme"
+                        android:textSize="@dimen/x36"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/plant_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x32"
+                    android:layout_below="@+id/ll_overview"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/third_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/_8sdp"
+                android:padding="@dimen/_16sdp"
+                android:background="@color/background_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sec_view">
+
+                <LinearLayout
+                    android:id="@+id/ll_watering"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/x48"
+                        android:layout_height="@dimen/x48"
+                        android:src="@drawable/ic_watering" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x16"
+                        android:text="Watering"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/acme"
+                        android:textSize="@dimen/x36"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/based_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_33sdp"
+                    android:text="Watering data is based on"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/based_on_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x22"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/temperature"
+                    android:background="@drawable/bg_grey"
+                    android:layout_below="@+id/based_on"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@+id/ll_watering"
+                    android:layout_marginStart="@dimen/_9sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/based_on_Site"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x22"
+                    android:padding="@dimen/_8sdp"
+                    android:text="Site"
+                    android:background="@drawable/bg_grey"
+                    android:layout_below="@+id/based_on"
+                    android:layout_toEndOf="@+id/based_on_temp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/based_on_Season"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x22"
+                    android:padding="@dimen/_8sdp"
+                    android:text="Season"
+                    android:background="@drawable/bg_grey"
+                    android:layout_below="@+id/based_on"
+                    android:layout_toEndOf="@+id/based_on_Site"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/watering"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x32"
+                    android:layout_below="@+id/based_on_temp"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fourth_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/_8sdp"
+                android:padding="@dimen/_16sdp"
+                android:background="@color/background_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/third_view">
+
+                <LinearLayout
+                    android:id="@+id/ll_fert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x16"
+                        android:text="@string/plantdetailplantinfo_fertilizing_title"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/acme"
+                        android:textSize="@dimen/x36"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/plant_fert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x32"
+                    android:layout_below="@+id/ll_fert"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/five_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/_8sdp"
+                android:padding="@dimen/_16sdp"
+                android:background="@color/background_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fourth_view">
+
+                <LinearLayout
+                    android:id="@+id/ll_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x16"
+                        android:text="@string/temperature"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/acme"
+                        android:textSize="@dimen/x36"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/plant_temp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x32"
+                    android:layout_below="@+id/ll_temp"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/six_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/_8sdp"
+                android:padding="@dimen/_16sdp"
+                android:background="@color/background_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/five_view">
+
+                <LinearLayout
+                    android:id="@+id/ll_site"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x16"
+                        android:text="Site"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/acme"
+                        android:textSize="@dimen/x36"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/plant_site"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x32"
+                    android:layout_below="@+id/ll_site"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/seven_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/_8sdp"
+                android:padding="@dimen/_16sdp"
+                android:background="@color/background_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/six_view">
+
+                <LinearLayout
+                    android:id="@+id/ll_pruning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x16"
+                        android:text="Pruning"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/acme"
+                        android:textSize="@dimen/x36"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/plant_pruning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x32"
+                    android:layout_below="@+id/ll_pruning"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/container_disease_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="@dimen/_8sdp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seven_view">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x32"
+                        android:background="@color/background_green"
+                        android:orientation="vertical"
+                        android:padding="@dimen/x32">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/experts_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/img_expert_diagnose"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/experts_title_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/x24"
+                                android:text="@string/diagnose2_new"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/x32"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/experts_iv"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/experts_subtitle_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/x24"
+                                android:layout_marginTop="@dimen/x10"
+                                android:text="@string/diagnose1_new"
+                                android:textColor="@color/color_666666"
+                                android:textSize="@dimen/x30"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/experts_iv"
+                                app:layout_constraintTop_toBottomOf="@+id/experts_title_tv" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/ask_experts_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x80"
+                            android:padding="7dp"
+                            android:layout_marginTop="@dimen/x24"
+                            android:background="@drawable/shape_solid_1fcc98_r_22"
+                            android:gravity="center"
+                            android:text="@string/plantdetailoverview_planthealth_text_askanexpert"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/x36" />
+                    </LinearLayout>
+                </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

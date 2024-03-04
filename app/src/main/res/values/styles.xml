@@ -28,11 +28,26 @@
     
     <style name="roundimageview" parent="">
 
-        <item name="cornerFamilyBottomLeft">rounded</item>
-        <item name="cornerFamilyBottomRight">rounded</item>
-        <item name="cornerSizeBottomLeft">@dimen/x30</item>
-        <item name="cornerSizeBottomRight">@dimen/x30</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_10sdp</item>
         <item name="color">@color/white</item>
+
+
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ThemeOverlay.search" parent="AppTheme">
+
+        <!-- Text color -->
+        <item name="android:editTextColor">@color/black</item>
+        <!-- Hint text color -->
+        <item name="android:textColorHint">@color/color_519071</item>
 
     </style>
 </resources>

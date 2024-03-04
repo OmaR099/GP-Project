@@ -175,4 +175,16 @@
     <string name="grape">Grape</string>
     <string name="corn">Corn</string>
     <string name="apple">Apple</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="schedule_notification">Schedule Notification</string>
+    <string name="notes_title">Notes Title</string>
+    <string name="notes_sub_title">Notes Sub Title</string>
+    <string name="notes_desc">Enter Note Here</string>
+    <string name="web_url">Enter Web Url</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="storage_permission_text">This app needs access to your storage.</string>
+    <string name="delete_plant">Delete Plant</string>
+    <string name="temperature">Temperature</string>
 </resources>

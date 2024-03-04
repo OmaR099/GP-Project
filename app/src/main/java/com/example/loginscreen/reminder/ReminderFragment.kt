@@ -1,10 +1,12 @@
 package com.example.loginscreen.reminder
 
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.TypedValue
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -28,6 +30,10 @@ class ReminderFragment:  AppCompatActivity(){
         setContentView(binding.root)
 
         binding.vsContainerEmpty.run { visibility = View.VISIBLE }
+
+        val addReminder = findViewById<LinearLayout>(R.id.ll_add_plant_btn)
+
+        addReminder.setOnClickListener { startActivity(Intent(this, ReminderSetting::class.java)) }
 
         binding.locationToAllowBtn.setOnClickListener { weatherTask().execute() }
 

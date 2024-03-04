@@ -38,6 +38,8 @@ class DiagnosisResult : AppCompatActivity() {
         openSnapTips()
         leaves()
 
+        binding.uploadView.setOnClickListener { startActivity(Intent(this, UploadImage::class.java)) }
+
 //        firebase
 
 //        Start Camera
