@@ -2,7 +2,7 @@
 <resources>
     <string name="about_3_6_hours_sunlight">About 3–6 hours sunlight</string>
     <string name="androidx_startup">androidx.startup</string>
-    <string name="app_name">Planto</string>
+    <string name="app_name">Leafy Lens</string>
     <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="at_least_6_hours_sunlight">At least 6 hours sunlight</string>
     <string name="back">Back</string>
@@ -83,7 +83,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="text_add_images">Add images</string>
     <string name="text_additional_info">Additional info:</string>
-    <string name="text_ask_master_gardener">Ask master gardener</string>
+    <string name="text_ask_master_gardener">Ask Master Gardener</string>
     <string name="text_description">Description</string>
     <string name="text_feedback_description_placeholder">Leave your feedback here</string>
     <string name="text_location_of_the_plant">Location of the plant (so we can provide a customized solution for your plant)</string>
@@ -92,10 +92,11 @@
     <string name="text_support_export_content">Please provide more details about your plant in the form below. This will help our experts to find an accurate diagnosis and an effective solution.</string>
     <string name="text_support_export_detail_placeholder">Is there anything that you want to share with our experts about your plant? (e.g. you recently relocated it, changed the watering frequency, etc.)</string>
     <string name="text_support_frequently_to_water">How often have you watered your plants lately?</string>
-    <string name="text_support_how_long_takecareit">how long have you cared for this plant</string>
+    <string name="text_support_how_long_takecareit">how long have you cared for this plant?</string>
     <string name="text_support_upload_picture_content">Take or upload clear pictures of the whole plant and the parts that may be sick.</string>
     <string name="text_tap_to_select">Tap to select</string>
     <string name="text_your_emain_addr">Your Email Address</string>
+    <string name="text_gardener_emain_addr">Gardener Email Address</string>
     <string name="tips_memo1000_btn">Got it</string>
     <string name="tips_memo1000_title">Snap Tips</string>
     <string name="tips_memo1000_wrong_desc">The following will lead to poor results</string>
@@ -187,4 +188,150 @@
     <string name="storage_permission_text">This app needs access to your storage.</string>
     <string name="delete_plant">Delete Plant</string>
     <string name="temperature">Temperature</string>
+
+    <string-array name="frequently_water">
+        <item>Daily</item>
+        <item>Every 2–3 days</item>
+        <item>Once a week</item>
+        <item>Every 1–2 weeks</item>
+        <item>I haven\'t watered them in a while</item>
+    </string-array>
+
+    <string-array name="cared">
+        <item>Less than a month</item>
+        <item>1–3 months</item>
+        <item>3–6 months</item>
+        <item>6 months to a year</item>
+        <item>More than a year</item>
+        <item>I don\'t remember exactly</item>
+    </string-array>
+
+    <string-array name="general_Location">
+        <item>Indoors</item>
+        <item>Outdoors</item>
+    </string-array>
+
+    <string-array name="further_details">
+        <item>Direct sunlight</item>
+        <item>Partial shade</item>
+        <item>Full shade</item>
+        <item>Balcony/patio</item>
+        <item>Porch/covered area</item>
+        <item>Greenhouse</item>
+    </string-array>
+
+    <string-array name="plant_type">
+        <item>Houseplant</item>
+        <item>Vegetable</item>
+        <item>Fruit tree</item>
+        <item>Outdoor flowering plant</item>
+    </string-array>
+
+    <string-array name="email">
+        <item>omer.osama07@gmail.com</item>
+        <item>omer.tiger.blue@gmail.com</item>
+        <item>omer_tiger_blue46@yahoo.com</item>
+        <item>omer_tiger_blue71@yahoo.com</item>
+        <item>VegetableHelper@gmail.com</item>
+        <item>HouseplantHelper@gmail.com</item>
+        <item>FruitHelper@gmail.com</item>
+        <item>OutdoorFloweringPlantHelper@gmail.com</item>
+        <item>Dr.Gardener@gmail.com</item>
+    </string-array>
+    <string-array name="emailFruits">
+        <item>omer.osama07@gmail.com</item>
+        <item>FruitHelper@gmail.com</item>
+        <item>omer_tiger_blue71@yahoo.com</item>
+    </string-array>
+    <string-array name="emailVegetable">
+        <item>VegetableHelper@gmail.com</item>
+        <item>omer_tiger_blue46@yahoo.com</item>
+    </string-array>
+    <string-array name="emailHouseplant">
+        <item>HouseplantHelper@gmail.com</item>
+        <item>omer.tiger.blue@gmail.com</item>
+    </string-array>
+    <string-array name="emailOutdoorFloweringPlant">
+        <item>OutdoorFloweringPlantHelper@gmail.com</item>
+        <item>Dr.Gardener@gmail.com</item>
+    </string-array>
+
+    <string-array name="plantCond">
+        <item>Healthy</item>
+        <item>Showing signs of distress</item>
+    </string-array>
+    <string-array name="subjectHealthy">
+        <item>Plant Fertilizing</item>
+        <item>Over Watering</item>
+        <item>Under Watering</item>
+        <item>How to take care of my plant (Guide)</item>
+        <item>Best site location for my plant</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="subjectDisease">
+        <item>Leaves</item>
+        <item>Stems</item>
+        <item>Flowers</item>
+        <item>Overall plant</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="plantCategory">
+    </string-array>
+    <string-array name="fruitsTrees">
+        <item>Apple</item>
+        <item>Avocado</item>
+        <item>Banana</item>
+        <item>Blackberry</item>
+        <item>Blueberry</item>
+        <item>Cherry</item>
+        <item>Cloudberry</item>
+        <item>Coconut</item>
+        <item>Crab apple</item>
+        <item>Grape</item>
+        <item>Honeyberry</item>
+        <item>Kiwi</item>
+        <item>Lemon</item>
+        <item>Loganberry</item>
+        <item>Lychee</item>
+        <item>Mango</item>
+        <item>Orange</item>
+        <item>Peach</item>
+        <item>Raspberry</item>
+        <item>Strawberry</item>
+        <item>Watermelon</item>
+    </string-array>
+    <string-array name="vegetables">
+        <item>Corn</item>
+        <item>Pepper</item>
+        <item>Potato</item>
+        <item>Tomato</item>
+    </string-array>
+    <string-array name="housePlant">
+        <item>African Violets</item>
+        <item>Aloe Vera</item>
+        <item>Christmas Cactus</item>
+        <item>Jade Plant</item>
+        <item>Orchids</item>
+        <item>Prickly Pear Cactus</item>
+        <item>Snake Plant</item>
+        <item>Spider Plant</item>
+        <item>Tillandsia</item>
+        <item>ZZ Plant</item>
+    </string-array>
+    <string-array name="outDoorFloweringPlants">
+        <item>Annuals</item>
+        <item>Biennials</item>
+        <item>Black-eyed Susans</item>
+        <item>Coneflowers</item>
+        <item>Daylilies</item>
+        <item>Foxgloves</item>
+        <item>Hostas</item>
+        <item>Impatiens</item>
+        <item>Lavender</item>
+        <item>Marigolds</item>
+        <item>Petunias</item>
+        <item>Sweet William</item>
+        <item>Zinnias</item>
+    </string-array>
 </resources>
