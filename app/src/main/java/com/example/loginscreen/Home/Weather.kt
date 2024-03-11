@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.AsyncTask
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
@@ -33,7 +34,13 @@ class Weather : AppCompatActivity() {
         pressure()
         uvIndex()
         humidity()
+        close()
 
+    }
+
+    private fun close() {
+        val closeBtn: ImageView = findViewById(R.id.weather_close_btn)
+        closeBtn.setOnClickListener { finish() }
     }
 
     private fun wind(){

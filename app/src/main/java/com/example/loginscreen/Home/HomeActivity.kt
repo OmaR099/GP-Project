@@ -8,14 +8,18 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
-import com.example.loginscreen.home.ProfileActivity
 import com.example.loginscreen.R
+import com.example.loginscreen.categories.Flowers
 import com.example.loginscreen.categories.Fruits
+import com.example.loginscreen.categories.PlantLeaf
+import com.example.loginscreen.categories.Trees
+import com.example.loginscreen.categories.Vegetables
 import com.example.loginscreen.databinding.ActivityHomeBinding
 import com.example.loginscreen.diagnosisResult.DiagnosisResult
 import com.example.loginscreen.myPlants.MyPlants
 import com.example.loginscreen.profile.NotificationSettingFragment
 import com.example.loginscreen.recommendations.LightMeterFragment
+import com.example.loginscreen.recommendations.PlantTemp
 import com.example.loginscreen.reminder.ReminderFragment
 import com.example.loginscreen.search.SearchPlantActivity
 
@@ -35,6 +39,11 @@ class HomeActivity : AppCompatActivity() {
         lightMeter()
         weather()
         fruits()
+        vegetables()
+        idealTemp()
+        flowers()
+        trees()
+        plantLeaf()
 
         binding.bottomNavigation.background = null
 
@@ -88,7 +97,25 @@ class HomeActivity : AppCompatActivity() {
         binding.llFruits.setOnClickListener { startActivity(Intent(this, Fruits::class.java)) }
     }
 
+    private fun vegetables() {
+        binding.vegetablesCV.setOnClickListener { startActivity(Intent(this, Vegetables::class.java)) }
+    }
 
+    private fun flowers() {
+        binding.cvFlowers.setOnClickListener { startActivity(Intent(this, Flowers::class.java)) }
+    }
+
+    private fun trees() {
+        binding.cvTrees.setOnClickListener { startActivity(Intent(this, Trees::class.java)) }
+    }
+
+    private fun plantLeaf() {
+        binding.cvPlantLeaf.setOnClickListener { startActivity(Intent(this, PlantLeaf::class.java)) }
+    }
+
+    private fun idealTemp() {
+        binding.tempBtn.setOnClickListener { startActivity(Intent(this, PlantTemp::class.java)) }
+    }
 
     private fun profileBtn() {
         binding.bottomNavigation.setOnItemSelectedListener {

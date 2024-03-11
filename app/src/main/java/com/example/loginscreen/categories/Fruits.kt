@@ -12,15 +12,19 @@ import com.example.loginscreen.home.User2
 class Fruits: AppCompatActivity() {
     private lateinit var binding: FruitsCategoryBinding
     private lateinit var userArrayList: ArrayList<User2>
+    private lateinit var myAdapter: MyAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = FruitsCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+//        myAdapter = MyAdapter(this, userArrayList)
+//        binding.listView.adapter = myAdapter
 //        callbacks
 //        search()
         cancelBtn()
+
 
         val imageId = intArrayOf(
 
@@ -289,19 +293,19 @@ class Fruits: AppCompatActivity() {
 
     }
 
-//    private fun search() {
-//
-//        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-//            override fun onQueryTextSubmit(p0: String?): Boolean {
-//                return true
-//            }
-//
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                TODO("Not yet implemented")
-//            }
-//
-//        })
-//
-//    }
+    private fun search() {
+
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                myAdapter.getFilter().filter(newText)
+                return false
+            }
+        })
+
+    }
 
 }

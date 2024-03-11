@@ -34,7 +34,7 @@
                 android:paddingBottom="@dimen/x10"
                 android:text="@string/text_ask_master_gardener"
                 android:textColor="#ffffffff"
-                android:textSize="19.73sp"
+                android:textSize="@dimen/_16ssp"
                 android:textStyle="bold" />
 
             <TextView
@@ -47,7 +47,7 @@
                 android:lineSpacingMultiplier="1.2"
                 android:text="@string/text_support_export_content"
                 android:textColor="#666666"
-                android:textSize="16.44sp" />
+                android:textSize="@dimen/_13ssp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -56,9 +56,9 @@
                 android:layout_marginTop="@dimen/x48"
                 android:layout_marginEnd="@dimen/x60"
                 android:lineSpacingMultiplier="1.2"
-                android:text="Plant condition"
+                android:text="@string/plant_condition"
                 android:textColor="#ff333333"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_12ssp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -103,7 +103,7 @@
                     android:paddingStart="@dimen/_30sdp"
                     android:inputType="none"
                     android:textSize="@dimen/_8ssp"
-                    android:hint="Specify the subject"/>
+                    android:hint="@string/specify_the_subject"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -117,7 +117,7 @@
                 android:lineSpacingMultiplier="1.2"
                 android:text="@string/text_add_images"
                 android:textColor="#ff333333"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_12ssp" />
 
             <TextView
                 android:id="@+id/tv_image_content"
@@ -130,7 +130,7 @@
                 android:lineSpacingMultiplier="1.2"
                 android:text="@string/text_support_upload_picture_content"
                 android:textColor="#666666"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_12ssp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_image"
@@ -150,7 +150,7 @@
                 android:lineSpacingMultiplier="1.2"
                 android:text="@string/text_support_frequently_to_water"
                 android:textColor="#ff333333"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_11ssp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -184,7 +184,7 @@
                 android:lineSpacingMultiplier="1.2"
                 android:text="@string/text_support_how_long_takecareit"
                 android:textColor="#ff333333"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_12ssp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -218,7 +218,7 @@
                 android:lineSpacingMultiplier="1.2"
                 android:text="@string/text_location_of_the_plant"
                 android:textColor="#ff333333"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_12ssp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -227,9 +227,9 @@
                 android:layout_marginTop="@dimen/x30"
                 android:layout_marginEnd="@dimen/x60"
                 android:lineSpacingMultiplier="1.2"
-                android:text="General Location"
+                android:text="@string/general_location"
                 android:textColor="#ff333333"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_12ssp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -261,9 +261,9 @@
                 android:layout_marginTop="@dimen/x30"
                 android:layout_marginEnd="@dimen/x60"
                 android:lineSpacingMultiplier="1.2"
-                android:text="Further details"
+                android:text="@string/further_details"
                 android:textColor="#ff333333"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_12ssp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -303,7 +303,7 @@
                 android:paddingStart="@dimen/x20"
                 android:paddingEnd="@dimen/x20"
                 android:textColor="@color/DarkGray"
-                android:textSize="@dimen/x28" />
+                android:textSize="@dimen/_11ssp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -312,9 +312,9 @@
                 android:layout_marginTop="@dimen/x30"
                 android:layout_marginEnd="@dimen/x60"
                 android:lineSpacingMultiplier="1.2"
-                android:text="Plant type"
+                android:text="@string/plant_type"
                 android:textColor="#ff333333"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_12ssp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -347,9 +347,9 @@
                 android:layout_marginTop="@dimen/x30"
                 android:layout_marginEnd="@dimen/x60"
                 android:lineSpacingMultiplier="1.2"
-                android:text="Specific type"
+                android:text="@string/specific_type"
                 android:textColor="#ff333333"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_12ssp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -383,7 +383,7 @@
                 android:lineSpacingMultiplier="1.2"
                 android:text="@string/text_additional_info"
                 android:textColor="#ff333333"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_12ssp" />
 
             <EditText
                 android:id="@+id/et_add_info"
@@ -400,7 +400,7 @@
                 android:paddingTop="@dimen/x20"
                 android:paddingEnd="@dimen/x20"
                 android:textColor="@color/DarkGray"
-                android:textSize="@dimen/x28" />
+                android:textSize="@dimen/_11ssp" />
 
             <TextView
                 android:id="@+id/tv_address_title"
@@ -412,7 +412,7 @@
                 android:lineSpacingMultiplier="1.2"
                 android:text="@string/text_gardener_emain_addr"
                 android:textColor="#ff333333"
-                android:textSize="@dimen/x30" />
+                android:textSize="@dimen/_12ssp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -450,7 +450,7 @@
                 android:gravity="center"
                 android:text="@string/text_send"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/x32" />
+                android:textSize="@dimen/_12ssp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

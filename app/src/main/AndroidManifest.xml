@@ -79,6 +79,9 @@
             android:name=".diagnosisResult.Result"
             android:exported="false" />
         <activity
+            android:name=".recommendations.PlantTemp"
+            android:exported="false" />
+        <activity
             android:name=".GetStarted"
             android:exported="true" >
             <intent-filter>
@@ -99,6 +102,18 @@
             android:exported="false" />
         <activity
             android:name=".categories.Fruits"
+            android:exported="false" />
+        <activity
+            android:name=".categories.Vegetables"
+            android:exported="false" />
+        <activity
+            android:name=".categories.Flowers"
+            android:exported="false" />
+        <activity
+            android:name=".categories.Trees"
+            android:exported="false" />
+        <activity
+            android:name=".categories.PlantLeaf"
             android:exported="false" />
         <activity
             android:name=".SignUpPhoneNumber"

@@ -188,6 +188,20 @@
     <string name="storage_permission_text">This app needs access to your storage.</string>
     <string name="delete_plant">Delete Plant</string>
     <string name="temperature">Temperature</string>
+    <string name="plant_condition">Plant condition</string>
+    <string name="specify_the_subject">Specify the subject</string>
+    <string name="general_location">General Location</string>
+    <string name="further_details">Further details</string>
+    <string name="plant_type">Plant type</string>
+    <string name="specific_type">Specific type</string>
+    <string name="uv_index">UV Index</string>
+    <string name="_0">0</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="refresh">refresh</string>
+    <string name="cities">Cities</string>
+    <string name="this_weather_is_ideal_for">This Weather is ideal for</string>
+    <string name="pick_a_city_to_get_the_weather_recommendations">Pick a City to get the Weather Recommendations</string>
+    <string name="ideal_temperature">Ideal Temperature</string>
 
     <string-array name="frequently_water">
         <item>Daily</item>
@@ -300,12 +314,24 @@
         <item>Raspberry</item>
         <item>Strawberry</item>
         <item>Watermelon</item>
+        <item>Other</item>
     </string-array>
     <string-array name="vegetables">
+        <item>Bell pepper</item>
+        <item>Broccoli</item>
+        <item>Cabbage</item>
+        <item>Carrot</item>
+        <item>Chili pepper</item>
         <item>Corn</item>
-        <item>Pepper</item>
+        <item>Garlic</item>
+        <item>Lettuce</item>
+        <item>Mushrooms</item>
+        <item>Onion</item>
         <item>Potato</item>
+        <item>Spinach</item>
         <item>Tomato</item>
+        <item>Turnip</item>
+        <item>Other</item>
     </string-array>
     <string-array name="housePlant">
         <item>African Violets</item>
@@ -318,6 +344,7 @@
         <item>Spider Plant</item>
         <item>Tillandsia</item>
         <item>ZZ Plant</item>
+        <item>Other</item>
     </string-array>
     <string-array name="outDoorFloweringPlants">
         <item>Annuals</item>
@@ -333,5 +360,27 @@
         <item>Petunias</item>
         <item>Sweet William</item>
         <item>Zinnias</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="cites">
+        <item>Alexandria</item>
+        <item>Aswan</item>
+        <item>Asyut</item>
+        <item>Beheira</item>
+        <item>Beni Suef</item>
+        <item>Cairo</item>
+        <item>Damietta</item>
+        <item>Faiyum</item>
+        <item>Giza</item>
+        <item>Ismailia</item>
+        <item>Luxor</item>
+        <item>Minya</item>
+        <item>Port Said</item>
+        <item>Qena</item>
+        <item>Red Sea</item>
+        <item>Sohag</item>
+        <item>South Sinai</item>
+        <item>Suez</item>
     </string-array>
 </resources>

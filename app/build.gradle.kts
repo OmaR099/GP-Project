@@ -100,5 +100,7 @@ dependencies {
 
     //coroutines core
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
 }
 

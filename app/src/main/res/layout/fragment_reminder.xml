@@ -10,7 +10,7 @@
         android:id="@+id/top_View"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/shape_gradient_d9fff4_fefffe"
+        android:background="@color/background_green"
         app:layout_constraintDimensionRatio="375:240"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -18,7 +18,7 @@
         android:id="@+id/bottom_View"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/fefffe"
+        android:background="@color/background_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/top_View" />
 
@@ -26,11 +26,11 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/reminders"
         android:textColor="@color/color_0f4d2e"
-        android:textSize="@dimen/x52"
+        android:textSize="@dimen/_20ssp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +45,7 @@
         android:maxWidth="@dimen/x460"
         android:text="@string/reminders_text_careeachplant"
         android:textColor="@color/color_62857a"
-        android:textSize="@dimen/x28"
+        android:textSize="@dimen/_11ssp"
         app:layout_constraintStart_toStartOf="@+id/tv_title"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
@@ -75,7 +75,7 @@
                 android:maxLines="2"
                 android:text="@string/reminders_text_allowcontent"
                 android:textColor="@color/color_255d41"
-                android:textSize="@dimen/x26"
+                android:textSize="@dimen/_10ssp"
                 app:autoSizeMaxTextSize="@dimen/x26"
                 app:autoSizeMinTextSize="@dimen/x20"
                 app:autoSizeTextType="uniform"
@@ -91,7 +91,7 @@
                 android:gravity="center"
                 android:text="@string/reminders_text_allow"
                 android:textColor="@color/color_2db270"
-                android:textSize="@dimen/x26"
+                android:textSize="@dimen/_10ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/location_to_allow_notice" />
 
@@ -104,7 +104,8 @@
                 android:src="@drawable/ic_weather"
                 android:visibility="gone"
                 app:layout_constraintEnd_toStartOf="@+id/location_to_allow_btn"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/weather" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -124,7 +125,7 @@
                 android:lines="1"
                 android:singleLine="true"
                 android:textColor="@color/color_255d41"
-                android:textSize="@dimen/x24"
+                android:textSize="@dimen/_9ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -137,7 +138,8 @@
                 android:src="@drawable/icon_weather_refreshing"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/text_refresh"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/refresh" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -153,7 +155,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/color_0f4d2e"
-                android:textSize="@dimen/x52"
+                android:textSize="@dimen/_20ssp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/text_text_range"
                 app:layout_constraintEnd_toEndOf="@+id/text_text_range"
@@ -164,7 +166,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/color_62857a"
-                android:textSize="@dimen/x28"
+                android:textSize="@dimen/_11ssp"
                 app:layout_constraintEnd_toEndOf="@+id/text_temp"
                 app:layout_constraintTop_toBottomOf="@+id/text_temp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
