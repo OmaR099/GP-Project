@@ -8,12 +8,11 @@ import android.media.ThumbnailUtils
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.loginscreen.R
 import com.example.loginscreen.databinding.FragmentDiagnoseBinding
 import com.example.loginscreen.home.SnapTips
-import com.example.loginscreen.ml.DiseaseDetection
+import com.example.loginscreen.ml.Classes23
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import java.io.ByteArrayOutputStream
@@ -65,7 +64,7 @@ class DiagnosisResult : AppCompatActivity() {
 
     private fun classifyImage(image: Bitmap) {
         try {
-            val model = DiseaseDetection.newInstance(applicationContext)
+            val model = Classes23.newInstance(applicationContext)
 
             // Creates inputs for reference.
             val inputFeature0 =
@@ -98,14 +97,28 @@ class DiagnosisResult : AppCompatActivity() {
                 }
             }
             val classes = arrayOf(
+                "Apple scab",
+                "Apple Black rot",
+                "Apple healthy",
+                "Background without leaves",
+                "Cherry healthy",
+                "Cherry Powdery mildew",
+                "Corn Cercospora leaf spot Gray leaf spot",
+                "Corn Common rust",
+                "Corn healthy",
+                "Grape Black rot",
+                "Grape healthy",
+                "Peach Bacterial spot",
+                "Peach healthy",
                 "Pepper bell Bacterial spot",
                 "Pepper bell healthy",
                 "Potato Early blight",
                 "Potato healthy",
                 "Potato Late blight",
-                "Tomato Target Spot",
-                "Tomato Tomato mosaic virus",
-                "Tomato Tomato YellowLeaf Curl_Virus",
+                "Strawberry healthy",
+                "Strawberry Leaf scorch",
+                "Tomato Bacterial spot",
+                "Tomato Early blight",
                 "Tomato healthy"
             )
             modelResult = classes[maxPos]

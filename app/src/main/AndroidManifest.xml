@@ -37,6 +37,9 @@
             android:name=".reminder.ReminderSetting"
             android:exported="false" />
         <activity
+            android:name=".moreService.PestsIdentification"
+            android:exported="false" />
+        <activity
             android:name=".home.AskExpertFragment"
             android:exported="false" />
         <activity

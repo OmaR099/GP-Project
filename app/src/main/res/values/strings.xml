@@ -156,7 +156,7 @@
     <string name="plantsetting_pot_text_drainage">Drainage</string>
     <string name="disease">Disease</string>
     <string name="confidences">Confidences</string>
-    <string name="lightmeter_text_lightmetertips">Place phone near your plant and aim your camera toward its natural light source</string>
+    <string name="lightmeter_text_lightmetertips">Place phone near your plant and aim your front camera toward its natural light source</string>
     <string name="health_text_autodiagnose">Auto-Diagnose</string>
     <string name="diagnose_gettheirhealthback_text">Help your plants get their health back</string>
     <string name="diagnose_diagnosesickplant_text">Diagnose sick plant</string>
@@ -202,6 +202,12 @@
     <string name="this_weather_is_ideal_for">This Weather is ideal for</string>
     <string name="pick_a_city_to_get_the_weather_recommendations">Pick a City to get the Weather Recommendations</string>
     <string name="ideal_temperature">Ideal Temperature</string>
+    <string name="_done">Done</string>
+    <string name="more_service">More Service</string>
+    <string name="flower_identification">Flower Identification</string>
+    <string name="toxic_plant_identification">Toxicity Checker</string>
+    <string name="pests_identification">Pests/insects Identification</string>
+    <string name="unsure_if_those_bugs_are_helping_or_hurting_your_plants_time_to_become_a_garden_detective_and_identify_them">Unsure if those bugs are helping or hurting your plants? Time to become a garden detective and identify them!</string>
 
     <string-array name="frequently_water">
         <item>Daily</item>

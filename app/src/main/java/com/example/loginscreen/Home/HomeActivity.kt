@@ -16,6 +16,7 @@ import com.example.loginscreen.categories.Trees
 import com.example.loginscreen.categories.Vegetables
 import com.example.loginscreen.databinding.ActivityHomeBinding
 import com.example.loginscreen.diagnosisResult.DiagnosisResult
+import com.example.loginscreen.moreService.PestsIdentification
 import com.example.loginscreen.myPlants.MyPlants
 import com.example.loginscreen.profile.NotificationSettingFragment
 import com.example.loginscreen.recommendations.LightMeterFragment
@@ -44,6 +45,7 @@ class HomeActivity : AppCompatActivity() {
         flowers()
         trees()
         plantLeaf()
+        pestsBtn()
 
         binding.bottomNavigation.background = null
 
@@ -115,6 +117,10 @@ class HomeActivity : AppCompatActivity() {
 
     private fun idealTemp() {
         binding.tempBtn.setOnClickListener { startActivity(Intent(this, PlantTemp::class.java)) }
+    }
+
+    private fun pestsBtn() {
+        binding.pestBtn.setOnClickListener { startActivity(Intent(this, PestsIdentification::class.java)) }
     }
 
     private fun profileBtn() {

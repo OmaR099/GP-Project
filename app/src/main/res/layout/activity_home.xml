@@ -18,10 +18,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
+                android:id="@+id/topLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/green"
+                android:background="@color/background_green"
                 android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,24 +33,26 @@
                         android:id="@+id/imageView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="32dp"
-                        android:layout_marginEnd="32dp"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        android:layout_marginEnd="@dimen/_25sdp"
                         android:elevation="8dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/notification" />
+                        app:srcCompat="@drawable/notification"
+                        app:tint="@color/green" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
                     android:text="Find Your Plant \nHere!"
-                    android:textColor="@color/Home_color"
+                    android:textColor="@color/green"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:gravity="start"/>
 
                 <EditText
                     android:id="@+id/searchBtn"
@@ -69,8 +72,9 @@
                     android:inputType="text"
                     android:padding="16dp"
                     android:textColor="@color/white"
-                    android:textColorHint="@color/white" />
-            </LinearLayout>
+                    android:textColorHint="@color/white"
+                    android:layout_below="@+id/textView10"/>
+            </RelativeLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -111,6 +115,7 @@
                         <LinearLayout
                             android:id="@+id/reminderBtn"
                             android:layout_width="match_parent"
+                            android:background="@color/background_green"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
@@ -152,6 +157,7 @@
                             android:id="@+id/askExpert_Btn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/background_green"
                             android:orientation="vertical">
 
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -193,6 +199,7 @@
                             android:id="@+id/weatherBtn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/background_green"
                             android:orientation="vertical">
 
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -233,6 +240,7 @@
                             android:id="@+id/lightBtn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/background_green"
                             android:orientation="vertical">
 
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -273,6 +281,7 @@
                             android:id="@+id/tempBtn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/background_green"
                             android:orientation="vertical">
 
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -352,7 +361,7 @@
                         android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
@@ -369,7 +378,7 @@
                                     android:id="@+id/ll_fruits"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/shape_gradient_d9fff4_fefffe"
+                                    android:background="@color/background_green"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -405,7 +414,7 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/shape_gradient_d9fff4_fefffe"
+                                    android:background="@color/background_green"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -441,7 +450,7 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/shape_gradient_d9fff4_fefffe"
+                                    android:background="@color/background_green"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -477,7 +486,7 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/shape_gradient_d9fff4_fefffe"
+                                    android:background="@color/background_green"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -513,7 +522,7 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/shape_gradient_d9fff4_fefffe"
+                                    android:background="@color/background_green"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -560,7 +569,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="32dp"
                                 android:layout_weight="1"
-                                android:text="@string/most_view_plants"
+                                android:text="@string/more_service"
                                 android:textColor="@color/green"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -577,15 +586,166 @@
                                 android:textStyle="bold" />
                         </LinearLayout>
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/mostView_recycler"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:background="@drawable/bg_service"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:elevation="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_13sdp"
+                            android:padding="@dimen/_8sdp">
+
+                            <RelativeLayout
+                                android:id="@+id/pest_Btn"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="@dimen/_6sdp"
+                                android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/pest_Iv"
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_pests"
+                                android:layout_marginStart="@dimen/_13sdp"
+                                android:contentDescription="@string/pests_identification" />
+
+                            <TextView
+                                android:id="@+id/pests_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pests_identification"
+                                android:layout_toEndOf="@id/pest_Iv"
+                                android:layout_marginStart="@dimen/_13sdp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/manrope_bold"
+                                android:textSize="@dimen/_13ssp"/>
+
+                            <TextView
+                                android:id="@+id/pests_des"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/unsure_if_those_bugs_are_helping_or_hurting_your_plants_time_to_become_a_garden_detective_and_identify_them"
+                                android:layout_toEndOf="@id/pest_Iv"
+                                android:layout_below="@id/pests_title"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_marginStart="@dimen/_13sdp"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/_10ssp"
+                                android:fontFamily="@font/manrope" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/ColorGray"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_below="@id/pests_des"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/flower_identify"
+                                android:layout_width="match_parent"
+                                android:layout_below="@+id/pest_Btn"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/flower_Iv_ide"
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_rose_gif"
+                                    android:layout_marginStart="@dimen/_13sdp"
+                                    android:contentDescription="@string/flower_identification" />
+
+                                <TextView
+                                    android:id="@+id/flower_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/flower_identification"
+                                    android:layout_toEndOf="@id/flower_Iv_ide"
+                                    android:layout_marginStart="@dimen/_13sdp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:textSize="@dimen/_13ssp"/>
+
+                                <TextView
+                                    android:id="@+id/flower_des"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Stop wondering what that flower is! Identify it quickly and easily with our help."
+                                    android:layout_toEndOf="@id/flower_Iv_ide"
+                                    android:layout_below="@id/flower_title"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_13sdp"
+                                    android:textColor="@color/grey"
+                                    android:textSize="@dimen/_10ssp"
+                                    android:fontFamily="@font/manrope" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/ColorGray"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_below="@id/flower_des"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/toxic_identify"
+                                android:layout_width="match_parent"
+                                android:layout_below="@+id/flower_identify"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/toxic_Iv_ide"
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/non_toxic"
+                                    android:layout_marginStart="@dimen/_13sdp"
+                                    android:contentDescription="@string/toxic_plant_identification" />
+
+                                <TextView
+                                    android:id="@+id/toxic_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/toxic_plant_identification"
+                                    android:layout_toEndOf="@id/toxic_Iv_ide"
+                                    android:layout_marginStart="@dimen/_13sdp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:textSize="@dimen/_13ssp"/>
+
+                                <TextView
+                                    android:id="@+id/toxic_des"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Is this plant safe? Let's check."
+                                    android:layout_toEndOf="@id/toxic_Iv_ide"
+                                    android:layout_below="@id/toxic_title"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:layout_marginStart="@dimen/_13sdp"
+                                    android:textColor="@color/grey"
+                                    android:textSize="@dimen/_10ssp"
+                                    android:fontFamily="@font/manrope" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="58dp" />
+                            android:layout_height="58dp"
+                            android:layout_marginTop="@dimen/_16sdp"/>
                     </LinearLayout>
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/color_e5e5e5"
+    android:background="@color/background_green"
     tools:context=".myPlants.MyPlants">
 
     <View
         android:id="@+id/top_View"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/shape_gradient_d9fff4_fefffe"
+        android:background="@color/background_green"
         app:layout_constraintDimensionRatio="375:240"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,7 +19,7 @@
         android:id="@+id/bottom_View"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/white"
+        android:background="@color/background_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/top_View" />
 
@@ -73,7 +73,7 @@
         android:layout_width="@dimen/x48"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
         android:adjustViewBounds="true"
         android:src="@drawable/myplants_premium_icon"
         app:layout_constraintRight_toLeftOf="@+id/iv_setting"
@@ -86,7 +86,7 @@
         android:layout_marginStart="@dimen/x24"
         android:layout_marginTop="@dimen/x40"
         android:layout_marginEnd="@dimen/x24"
-        android:background="@drawable/shape_solid_dff2ec_r_10"
+        android:background="@color/background_green"
         app:layout_constraintTop_toBottomOf="@+id/myplants_sub_title_tv"
         app:tabBackground="@color/transparent"
         app:tabIndicator="@drawable/tab_indicator_my_plants"

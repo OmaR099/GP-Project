@@ -66,6 +66,7 @@ dependencies {
     implementation("com.google.firebase:firebase-core:21.1.1")
     implementation("com.android.car.ui:car-ui-lib:2.6.0")
     implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
+    implementation("org.tensorflow:tensorflow-lite-gpu:2.5.0")
 
 
     testImplementation("junit:junit:4.13.2")
@@ -77,7 +78,7 @@ dependencies {
     implementation("org.tensorflow:tensorflow-lite-support:0.2.0")
     implementation("org.tensorflow:tensorflow-lite-metadata:0.2.0")
 
-    implementation ("androidx.camera:camera-view:1.3.1")
+    implementation ("androidx.camera:camera-view:1.3.2")
 
     //scalable unit size
     implementation ("com.intuit.sdp:sdp-android:1.0.6")
@@ -102,5 +103,8 @@ dependencies {
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
+
+    implementation ("com.mikhaellopez:circularprogressbar:3.1.0")
+
 }
 
