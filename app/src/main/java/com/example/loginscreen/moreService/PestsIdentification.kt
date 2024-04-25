@@ -118,51 +118,87 @@ class PestsIdentification: AppCompatActivity() {
             when(classes[maxPos]){
                 "Ants" -> {binding.infoPests.text = "While some species of ants can be beneficial to plants by aerating the soil and controlling other pest populations, most ants are attracted to the sweet honeydew produced by aphids and other sap-sucking insects. They will protect these pests from predators in exchange for the honeydew, which can lead to an increase in pest problems."
                     binding.harmfulUseful.text = "Harmful Pest"
-                    binding.note.text = ""}
+                    binding.note.text = ""
+                    binding.img1.setImageResource(R.drawable.ants1)
+                    binding.img2.setImageResource(R.drawable.ants2)
+                    binding.img3.setImageResource(R.drawable.ants3)}
 
                 "Bees" -> {binding.infoPests.text = "Bees are important pollinators that help plants reproduce by transferring pollen between flowers."
                     binding.harmfulUseful.text = "Useful insects"
-                    binding.note.text = "It's important to note that even beneficial insects can become pests if their populations get out of control.  The key is to maintain a balance in your garden."}
+                    binding.note.text = "It's important to note that even beneficial insects can become pests if their populations get out of control.  The key is to maintain a balance in your garden."
+                    binding.img1.setImageResource(R.drawable.bees1)
+                    binding.img2.setImageResource(R.drawable.bees2)
+                    binding.img3.setImageResource(R.drawable.bees3)}
 
                 "Beetle" -> {binding.infoPests.text = "There are many different species of beetles, and some can be destructive to plants. For example, Japanese beetles and cucumber beetles feed on the leaves and flowers of many plants."
                     binding.harmfulUseful.text = "Harmful Pest"
-                    binding.note.text = ""}
+                    binding.note.text = ""
+                    binding.img1.setImageResource(R.drawable.beetle1)
+                    binding.img2.setImageResource(R.drawable.beetle2)
+                    binding.img3.setImageResource(R.drawable.beetle3)}
 
                 "Catterpillar" -> {binding.infoPests.text = "Caterpillars are the larval stage of butterflies and moths. They can be very destructive to plants, as they eat large quantities of leaves."
                     binding.harmfulUseful.text = "Harmful Pest"
-                    binding.note.text = ""}
+                    binding.note.text = ""
+                    binding.img1.setImageResource(R.drawable.catterpillar1)
+                    binding.img2.setImageResource(R.drawable.catterpilla2)
+                    binding.img3.setImageResource(R.drawable.catterpilla3)}
 
                 "Earthworms" -> {binding.infoPests.text = "Earthworms improve soil aeration and drainage by burrowing through the soil. Their castings (poop) also add nutrients to the soil."
                     binding.harmfulUseful.text = "Useful insects"
-                    binding.note.text = "It's important to note that even beneficial insects can become pests if their populations get out of control.  The key is to maintain a balance in your garden."}
+                    binding.note.text = "It's important to note that even beneficial insects can become pests if their populations get out of control.  The key is to maintain a balance in your garden."
+                    binding.img1.setImageResource(R.drawable.earthworms1)
+                    binding.img2.setImageResource(R.drawable.earthworms2)
+                    binding.img3.setImageResource(R.drawable.earthworms3)}
 
                 "Earwig" -> {binding.infoPests.text = "Earwigs can damage leaves and flowers, but they are also beneficial predators of aphids and other small insects. Whether the benefit outweighs the harm depends on the severity of the earwig infestation.\n"
                     binding.harmfulUseful.text = "Harmful Pest"
-                    binding.note.text = ""}
+                    binding.note.text = ""
+                    binding.img1.setImageResource(R.drawable.earwig1)
+                    binding.img2.setImageResource(R.drawable.earwig2)
+                    binding.img3.setImageResource(R.drawable.earwig3)}
 
                 "Grasshopper" -> {binding.infoPests.text = "Grasshoppers are chewing insects that can eat large quantities of leaves. They can be a serious pest in gardens and fields."
                     binding.harmfulUseful.text = "Harmful Pest"
-                    binding.note.text = ""}
+                    binding.note.text = ""
+                    binding.img1.setImageResource(R.drawable.grasshopper1)
+                    binding.img2.setImageResource(R.drawable.grasshopper2)
+                    binding.img3.setImageResource(R.drawable.grasshopper3)}
 
                 "Moth" -> {binding.infoPests.text = "Like caterpillars, moths can be destructive to plants, as they also eat leaves. Some moth species, like the codling moth, also damage fruits."
                     binding.harmfulUseful.text = "Harmful Pest"
-                    binding.note.text = ""}
+                    binding.note.text = ""
+                    binding.img1.setImageResource(R.drawable.moth1)
+                    binding.img2.setImageResource(R.drawable.moth2)
+                    binding.img3.setImageResource(R.drawable.moth3)}
 
                 "Slug" -> {binding.infoPests.text = "Slugs and snails are both gastropods that can damage leaves and flowers. They are most active in moist conditions."
                     binding.harmfulUseful.text = "Harmful Pest"
-                    binding.note.text = ""}
+                    binding.note.text = ""
+                    binding.img1.setImageResource(R.drawable.slug1)
+                    binding.img2.setImageResource(R.drawable.slug2)
+                    binding.img3.setImageResource(R.drawable.slug3)}
 
                 "Snail" -> {binding.infoPests.text = "Snails are similar to slugs, but they have a shell that they can retreat into. They can be a nuisance in gardens, but they are not usually as destructive as slugs."
                     binding.harmfulUseful.text = "Harmful Pest"
-                    binding.note.text = ""}
+                    binding.note.text = ""
+                    binding.img1.setImageResource(R.drawable.snail1)
+                    binding.img2.setImageResource(R.drawable.snail2)
+                    binding.img3.setImageResource(R.drawable.snail3)}
 
                 "Wasp" -> {binding.infoPests.text = "Some wasps can be beneficial predators of garden pests, but others can damage plants. For example, wasps in the genus Cynips form galls on oak trees. Galls are growths on plants caused by the feeding activity of insects or mites."
                     binding.harmfulUseful.text = "Harmful Pest"
-                    binding.note.text = ""}
+                    binding.note.text = ""
+                    binding.img1.setImageResource(R.drawable.wasp1)
+                    binding.img2.setImageResource(R.drawable.wasp2)
+                    binding.img3.setImageResource(R.drawable.wasp3)}
 
                 "Weevil" -> {binding.infoPests.text = "Weevils are beetles with a long snout. Many species of weevils are pests of agricultural crops. For example, the boll weevil is a major pest of cotton."
                     binding.harmfulUseful.text = "Harmful Pest"
-                    binding.note.text = ""}
+                    binding.note.text = ""
+                    binding.img1.setImageResource(R.drawable.weevil1)
+                    binding.img2.setImageResource(R.drawable.weevil2)
+                    binding.img3.setImageResource(R.drawable.weevil3)}
 
                 "No Insects or Pests" -> {binding.infoPests.text = "No Insects or Pests found in the image please capture the pest or insect again"
                     binding.harmfulUseful.text = "N/A"
