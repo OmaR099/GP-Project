@@ -13,6 +13,7 @@ import com.example.loginscreen.R
 import com.example.loginscreen.databinding.FragmentDiagnoseBinding
 import com.example.loginscreen.home.SnapTips
 import com.example.loginscreen.ml.Classes23
+import com.example.loginscreen.ml.ConvertedModel
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import java.io.ByteArrayOutputStream
@@ -64,11 +65,11 @@ class DiagnosisResult : AppCompatActivity() {
 
     private fun classifyImage(image: Bitmap) {
         try {
-            val model = Classes23.newInstance(applicationContext)
+            val model = ConvertedModel.newInstance(applicationContext)
 
             // Creates inputs for reference.
             val inputFeature0 =
-                TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.FLOAT32)
+                TensorBuffer.createFixedSize(intArrayOf(1, 150, 150, 3), DataType.FLOAT32)
             val byteBuffer = ByteBuffer.allocateDirect(4 * imageSize * imageSize * 3)
             byteBuffer.order(ByteOrder.nativeOrder())
             val intValues = IntArray(imageSize * imageSize)

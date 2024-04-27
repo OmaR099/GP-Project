@@ -208,6 +208,10 @@
     <string name="toxic_plant_identification">Toxicity Checker</string>
     <string name="pests_identification">Pests/insects Identification</string>
     <string name="unsure_if_those_bugs_are_helping_or_hurting_your_plants_time_to_become_a_garden_detective_and_identify_them">Unsure if those bugs are helping or hurting your plants? Time to become a garden detective and identify them!</string>
+    <string name="toxic_plants_identification">Toxic Plants Identification</string>
+    <string name="scientific_name">Scientific Name: </string>
+    <string name="result">Result:</string>
+    <string name="toxicity">Toxicity:</string>
 
     <string-array name="frequently_water">
         <item>Daily</item>

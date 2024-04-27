@@ -17,6 +17,7 @@ import com.example.loginscreen.categories.Vegetables
 import com.example.loginscreen.databinding.ActivityHomeBinding
 import com.example.loginscreen.diagnosisResult.DiagnosisResult
 import com.example.loginscreen.moreService.PestsIdentification
+import com.example.loginscreen.moreService.ToxicPlantsIdentification
 import com.example.loginscreen.myPlants.MyPlants
 import com.example.loginscreen.profile.NotificationSettingFragment
 import com.example.loginscreen.recommendations.LightMeterFragment
@@ -46,6 +47,7 @@ class HomeActivity : AppCompatActivity() {
         trees()
         plantLeaf()
         pestsBtn()
+        toxicBtn()
 
         binding.bottomNavigation.background = null
 
@@ -121,6 +123,10 @@ class HomeActivity : AppCompatActivity() {
 
     private fun pestsBtn() {
         binding.pestBtn.setOnClickListener { startActivity(Intent(this, PestsIdentification::class.java)) }
+    }
+
+    private fun toxicBtn() {
+        binding.toxicIdentify.setOnClickListener { startActivity(Intent(this, ToxicPlantsIdentification::class.java)) }
     }
 
     private fun profileBtn() {

@@ -3,16 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/background_green"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background_green">
 
     <include
         android:id="@+id/tool_bar"
-        layout="@layout/layout_toolbar_pests"
-        app:layout_constraintStart_toStartOf="parent"
+        layout="@layout/layout_toolbar_toxic_plants"
+        app:layout_constraintStart_toStartOf="@+id/scrollView3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +81,8 @@
                 android:textColor="@color/ColorPurpleNote"
                 android:textSize="@dimen/_15ssp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/conf" />
+                app:layout_constraintTop_toBottomOf="@id/conf"
+                tools:text="Toxic Plant" />
 
             <TextView
                 android:id="@+id/info_pests"
@@ -96,21 +98,88 @@
                 app:layout_constraintTop_toBottomOf="@id/harmful_useful" />
 
             <TextView
-                android:id="@+id/note"
+                android:id="@+id/uses_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_16sdp"
                 android:layout_marginTop="@dimen/_12sdp"
-                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/info_pests" />
+                app:layout_constraintTop_toBottomOf="@id/info_pests"
+                tools:text="Uses" />
+
+            <TextView
+                android:id="@+id/uses_des"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="26dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/uses_title"
+                tools:text="The Boxelder is generally considered non-toxic to humans and pets." />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/scientific_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/uses_des" />
+
+
+            <TextView
+                android:id="@+id/scientific_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/ColorPurpleNote"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                tools:text="Toxicodendron diversilobum" />
+
+            <TextView
+                android:id="@+id/toxicity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/toxicity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/scientific_name" />
+
+            <TextView
+                android:id="@+id/toxicity_des"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="26dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/toxicity"
+                tools:text="The Boxelder is generally considered non-toxic to humans and pets." />
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/note">
+                app:layout_constraintTop_toBottomOf="@+id/toxicity_des">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -168,4 +237,4 @@
         android:src="@drawable/ic_camera"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

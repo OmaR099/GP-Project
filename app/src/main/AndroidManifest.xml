@@ -40,6 +40,9 @@
             android:name=".moreService.PestsIdentification"
             android:exported="false" />
         <activity
+            android:name=".moreService.ToxicPlantsIdentification"
+            android:exported="false" />
+        <activity
             android:name=".home.AskExpertFragment"
             android:exported="false" />
         <activity
