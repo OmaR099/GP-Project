@@ -146,7 +146,7 @@ class ToxicPlantsIdentification: AppCompatActivity() {
                     binding.img2.setImageResource(R.drawable.fragrantsumac2)
                     binding.img3.setImageResource(R.drawable.fragrantsumac3)}
 
-                "Jack-in-the-pulpit" -> {binding.infoPests.text = "The Jack-in-the-Pulpit (Arisaema triphyllum) is a fascinating wildflower native to eastern North America. It's known for its unique flower structure, which resembles a pulpit enclosing a preacher (jack).\n\n• Size: 1-2 feet tall with 1 or 2 leaves each with three leaflets (triphyllum).\n\n• Flowers: Small, inconspicuous flowers clustered around a fleshy spike (spadix) enclosed by a large, colorful modified leaf (spathe). The spathe's colors can vary from green to striped green and maroon.\n\n• Bloom time: Spring (April to May)\n\n• Habitat: Moist woodlands with rich soil"
+                "Jack-in-the-pulpit" -> {binding.infoPests.text = "The Jack-in-the-Pulpit (Arisaema triphyllum) is a fascinating wildflower native to eastern North America. It's known for its unique flower structure, which resembles a pulpit enclosing a preacher (jack).\n\n• Size: 1-2 feet tall with 1 or 2 leaves each with three leaflets (triphyllum).\n\n• Flowers: Small, inconspicuous flowers clustered around a fleshy spike (spadix) enclosed by a large, colorful modified leaf (spathe). The spathe's colors can vary from green to striped green and maroon.\n\n• Bloom time: Spring (April to May)\n\n• Habitat: Moist woodlands with rich soil."
                     binding.harmfulUseful.text = "Toxic Plant"
                     binding.usesTitle.text = "Ecological importance:"
                     binding.usesDes.text = "• Provides food for insects and small mammals.\n\n• The bright red berries that appear in late summer are attractive to birds, helping disperse the seeds."
@@ -166,44 +166,62 @@ class ToxicPlantsIdentification: AppCompatActivity() {
                     binding.img2.setImageResource(R.drawable.virginiacreeper2)
                     binding.img3.setImageResource(R.drawable.virginiacreeper3)}
 
-                "Eastern Poison Ivy" -> {binding.infoPests.text = "Earwigs can damage leaves and flowers, but they are also beneficial predators of aphids and other small insects. Whether the benefit outweighs the harm depends on the severity of the earwig infestation.\n"
-                    binding.harmfulUseful.text = "Toxic Plant"
+                "Eastern Poison Ivy" -> {binding.infoPests.text = "Eastern Poison Ivy (Toxicodendron radicans) is a common and notorious plant native to most of North America. While it can take on various forms, it's best known for causing an itchy, blistering rash upon contact.\n\n• Appearance: Can be a groundcover, shrub, or climbing vine, with three leaflets per leaf (always!). Leaf edges can be smooth, serrated, or lobed, and leaflets vary in size and shape.\n\n• Habitat: Found in diverse habitats like forests, fields, roadsides, and even your own backyard.\n\n• Identification tip: Remember the saying, \"leaves of three, let it be!\"."
+                    binding.harmfulUseful.text = "Highly Toxic Plant"
+                    binding.usesTitle.text = "Benefits and drawbacks:"
+                    binding.usesDes.text = "• Wildlife food source: Produces berries that some birds can eat, and its leaves are browsed by deer in rare instances.\n\n• Erosion control: Dense root systems can help stabilize soil on slopes, though planting it for this purpose is not recommended due to its toxicity.\n\n• Highly Toxic: All parts of poison ivy contain urushiol, a potent oil that causes allergic dermatitis (rash) in most people. Contact with even a tiny amount can trigger an itchy, blistering rash that can take weeks to heal.\n\n• Spreads easily: Reproduces through seeds and underground runners, making eradication difficult."
                     binding.scientificName.text = "Toxicodendron radicans"
+                    binding.toxicityDes.text = "Highly Toxic! All parts of poison ivy contain urushiol, a potent oil that causes allergic dermatitis (rash) in most people. Contact with even a tiny amount can trigger an itchy, blistering rash that can take weeks to heal."
                     binding.img1.setImageResource(R.drawable.eastern_poison_ivy1)
                     binding.img2.setImageResource(R.drawable.eastern_poison_ivy2)
                     binding.img3.setImageResource(R.drawable.eastern_poison_ivy3)}
 
-                "Eastern Poison Oak" -> {binding.infoPests.text = "Grasshoppers are chewing insects that can eat large quantities of leaves. They can be a serious pest in gardens and fields."
-                    binding.harmfulUseful.text = "Toxic Plant"
+                "Eastern Poison Oak" -> {binding.infoPests.text = "Eastern Poison Oak (Toxicodendron pubescens) is a close relative of poison ivy, sharing its infamous itch-inducing properties. While it offers some ecological benefits, it's best admired from a safe distance.\n\n• Shrub or vine: Grows as a low-lying shrub or a climbing vine, depending on its environment.\n\n• Leaves: Divided into three leaflets (like poison ivy) with smooth or slightly lobed edges. The upper surface is typically glossy green, while the underside may be hairy.\n\n• Habitat: Found in dry, open areas like woodlands, chaparral, and coastal scrublands, primarily in eastern North America."
+                    binding.harmfulUseful.text = "Highly Toxic Plant"
+                    binding.usesTitle.text = "Benefits and drawbacks:"
+                    binding.usesDes.text = "• Wildlife food source: Provides berries for birds and browse for deer and rabbits.\n\n• Erosion control: Its dense root system helps stabilize soil on slopes and prevent erosion.\n\n• Highly toxic: Like poison ivy, all parts of Eastern Poison Oak contain urushiol oil, causing severe allergic skin reactions in most people. Contact leads to an itchy, blistering rash that can take weeks to heal.\n\n• Difficult to eradicate: Spreads easily through underground runners and seeds dispersed by animals."
                     binding.scientificName.text = "Toxicodendron pubescens"
+                    binding.toxicityDes.text = "Eastern Poison Oak is highly toxic. Even brushing against its leaves, stems, or roots can transfer the urushiol oil and trigger an allergic reaction. The oil can also remain active on clothing, tools, pet fur, and even smoke from burning the plant, posing a risk for delayed reactions."
                     binding.img1.setImageResource(R.drawable.eastern_poison_oak1)
                     binding.img2.setImageResource(R.drawable.eastern_poison_oak2)
                     binding.img3.setImageResource(R.drawable.eastern_poison_oak3)}
 
-                "Poison Sumac" -> {binding.infoPests.text = "Like caterpillars, moths can be destructive to plants, as they also eat leaves. Some moth species, like the codling moth, also damage fruits."
-                    binding.harmfulUseful.text = "Toxic Plant"
+                "Poison Sumac" -> {binding.infoPests.text = "Poison Sumac (Toxicodendron vernix) stands out even among its toxic relatives, poison ivy and oak.  This wetland dweller packs a powerful punch and should be avoided at all costs.\n\n• Habitat: Thrives in swamps, bogs, and other wet areas, unlike its drier-loving relatives.\n\n• Identification: Tall shrub or small tree with smooth, alternate leaves consisting of 7-13 leaflets, giving it a feathery appearance. Unlike poison ivy and oak, it has no central stalk for the leaflets.\n\n• Warning sign: Look for smooth, grey branches with a distinct lack of hairs or prickles."
+                    binding.harmfulUseful.text = "Extremely Toxic Plant"
+                    binding.usesTitle.text = "Benefits and drawbacks:"
+                    binding.usesDes.text = "• Wildlife food source: The white berries provide sustenance for some birds in late summer and fall.\n\n• Highly Toxic: All parts of Poison Sumac contain urushiol, but it's present in much higher concentrations than in poison ivy or oak. Even minimal contact can cause a severe allergic reaction with painful blistering, swelling, and even respiratory issues from inhaling smoke from burning the plant.\n\n• Spreads easily: Reproduces through seeds and underground suckers, making eradication challenging."
                     binding.scientificName.text = "Toxicodendron vernix"
+                    binding.toxicityDes.text = "Extremely Toxic.  Poison Sumac is considered the most toxic plant native to North America east of the Mississippi.  A single brush against its leaves, stems, or roots can trigger a severe allergic reaction.  The urushiol oil can also remain active on fur, clothing, and tools, posing a risk for delayed rashes."
                     binding.img1.setImageResource(R.drawable.poison_sumac1)
                     binding.img2.setImageResource(R.drawable.poison_sumac2)
                     binding.img3.setImageResource(R.drawable.poison_sumac3)}
 
-                "Western Poison Ivy" -> {binding.infoPests.text = "Slugs and snails are both gastropods that can damage leaves and flowers. They are most active in moist conditions."
-                    binding.harmfulUseful.text = "Toxic Plant"
+                "Western Poison Ivy" -> {binding.infoPests.text = "While Eastern Poison Ivy (Toxicodendron radicans) may be the more notorious itch-inducer, Western Poison Ivy (Toxicodendron rydbergii) shouldn't be underestimated. This resident of western North America packs the same potent punch as its eastern cousin.\n\n• Western dweller: Found throughout western US, Great Plains, and some northeastern regions.\n\n• Variable appearance: Can be a low-growing shrub, vine (less common than Eastern Poison Ivy), or even have three leaflets like its eastern counterpart. Unlike the eastern variety, it may also produce small, white berries.\n\n• Identification tip: \"Leaves of three, let it be!\" applies here too. If unsure, it's always best to err on the side of caution."
+                    binding.harmfulUseful.text = "Highly Toxic Plant"
+                    binding.usesTitle.text = "Benefits and drawbacks:"
+                    binding.usesDes.text = "• Limited wildlife food: White berries provide some sustenance for birds, but to a lesser extent than other native plants.\n\n• Highly Toxic: Like Eastern Poison Ivy, all parts of Western Poison Ivy contain urushiol oil, causing allergic dermatitis (rash) in most people. Even brushing against it can trigger an itchy, blistering rash that takes weeks to heal.\n\n• Spreads easily: Reproduces through seeds and underground runners, making eradication difficult."
                     binding.scientificName.text = "Toxicodendron rydbergii"
+                    binding.toxicityDes.text = "Western Poison Ivy is highly toxic.  Just like its eastern relative, even minimal contact with any part of the plant can transfer the urushiol oil and cause a severe allergic reaction. The oil can also remain active on clothing, tools, pet fur, and even smoke from burning the plant."
                     binding.img1.setImageResource(R.drawable.western_poison_ivy1)
                     binding.img2.setImageResource(R.drawable.western_poison_ivy2)
                     binding.img3.setImageResource(R.drawable.western_poison_ivy3)}
 
-                "Western Poison Oak" -> {binding.infoPests.text = "Snails are similar to slugs, but they have a shell that they can retreat into. They can be a nuisance in gardens, but they are not usually as destructive as slugs."
+                "Western Poison Oak" -> {binding.infoPests.text = "Western Poison Oak (Toxicodendron diversilobum) is aSneaky Scourge  found along the Pacific Coast of North America.  Just like its eastern counterpart, it  possesses the infamous urushiol oil, making it a plant to admire from afar.\n\n• Coastal dweller: Thrives in dry, open areas like woodlands, chaparral, and coastal scrublands, primarily in western North America.\n\n• Shape-shifter: Can appear as a dense shrub, a low-growing groundcover, or even a climbing vine, depending on its environment.\n\n• Leaves of Three: Similar to poison ivy, its leaves are divided into three leaflets. However, the edges can be smooth, lobed, or even wavy, making identification a bit trickier."
                     binding.harmfulUseful.text = "Toxic Plant"
+                    binding.usesTitle.text = "Benefits and drawbacks:"
+                    binding.usesDes.text = "• Limited wildlife food source: Provides some berries for birds and browse for deer in rare instances, but there are many safer alternatives.\n\n• Highly Toxic: All parts of Western Poison Oak contain urushiol oil, causing a severe allergic reaction (rash) in most people. Even brushing against it can trigger an itchy, blistering rash that can take weeks to heal.\n\n• Spreads easily: Reproduces through seeds and underground runners, making eradication difficult."
                     binding.scientificName.text = "Toxicodendron diversilobum"
+                    binding.toxicityDes.text = "Western Poison Oak is highly toxic. Similar to Eastern Poison Oak, even minimal contact with its leaves, stems, or roots can transfer the urushiol oil and cause a severe allergic reaction. The oil can also remain active on clothing, tools, pet fur, and even smoke from burning the plant, posing a risk for delayed rashes."
                     binding.img1.setImageResource(R.drawable.western_poison_oak1)
                     binding.img2.setImageResource(R.drawable.western_poison_oak2)
                     binding.img3.setImageResource(R.drawable.western_poison_oak3)}
 
-                "Image is empty" -> {binding.infoPests.text = "No plants found in the image please capture the plant again"
-                    binding.harmfulUseful.text = "N/A"
-                    binding.scientificName.text = "N/A"}
+                "Image is empty" -> {binding.infoPests.text = "No plants were found in the image please capture the image again"
+                    binding.harmfulUseful.text = "Retake the image Please !!"
+                    binding.usesTitle.text = ""
+                    binding.usesDes.text = ""
+                    binding.scientificName.text = ""
+                    binding.toxicityDes.text = ""}
 
 
             }

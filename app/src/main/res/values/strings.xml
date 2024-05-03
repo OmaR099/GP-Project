@@ -24,6 +24,7 @@
     <string name="findplant3_new">Add all of your plants for easy care</string>
     <string name="firebase_database_url">https://login-and-sign-up-21ceb-default-rtdb.firebaseio.com</string>
     <string name="flowers">Flowers</string>
+    <string name="flowers_identification">Flowers Identification</string>
     <string name="forgot_the_password">Forgot the Password?</string>
     <string name="fruits">Fruits</string>
     <string name="full_shade">Full shade</string>
@@ -212,6 +213,8 @@
     <string name="scientific_name">Scientific Name: </string>
     <string name="result">Result:</string>
     <string name="toxicity">Toxicity:</string>
+    <string name="care_guide">Care Guide:</string>
+    <string name="uses">Uses:</string>
 
     <string-array name="frequently_water">
         <item>Daily</item>
