@@ -8,18 +8,19 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import com.example.loginscreen.databinding.ActivityGetStartedBinding
+import com.example.loginscreen.databinding.SplashBinding
 
 class GetStarted : AppCompatActivity() {
 
-    private lateinit var binding: ActivityGetStartedBinding
+    private lateinit var binding: SplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityGetStartedBinding.inflate(layoutInflater)
+        binding = SplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
-        binding.getStartedBt.setOnClickListener {
+        binding.getStartedBt2.setOnClickListener {
             startActivity(Intent(this, SignInActivity::class.java))
             finish()
 

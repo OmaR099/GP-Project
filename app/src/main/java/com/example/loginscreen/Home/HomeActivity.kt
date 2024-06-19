@@ -9,6 +9,7 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
 import com.example.loginscreen.R
+import com.example.loginscreen.Test
 import com.example.loginscreen.categories.Flowers
 import com.example.loginscreen.categories.Fruits
 import com.example.loginscreen.categories.PlantLeaf
@@ -17,7 +18,9 @@ import com.example.loginscreen.categories.Vegetables
 import com.example.loginscreen.databinding.ActivityHomeBinding
 import com.example.loginscreen.diagnosisResult.DiagnosisResult
 import com.example.loginscreen.moreService.FlowersIdentification
+import com.example.loginscreen.moreService.PestsIde
 import com.example.loginscreen.moreService.PestsIdentification
+import com.example.loginscreen.moreService.ToxicIde
 import com.example.loginscreen.moreService.ToxicPlantsIdentification
 import com.example.loginscreen.myPlants.MyPlants
 import com.example.loginscreen.profile.NotificationSettingFragment
@@ -124,11 +127,11 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun pestsBtn() {
-        binding.pestBtn.setOnClickListener { startActivity(Intent(this, PestsIdentification::class.java)) }
+        binding.pestBtn.setOnClickListener { startActivity(Intent(this, PestsIde::class.java)) }
     }
 
     private fun toxicBtn() {
-        binding.toxicIdentify.setOnClickListener { startActivity(Intent(this, ToxicPlantsIdentification::class.java)) }
+        binding.toxicIdentify.setOnClickListener { startActivity(Intent(this, ToxicIde::class.java)) }
     }
 
     private fun flowerBtn() {

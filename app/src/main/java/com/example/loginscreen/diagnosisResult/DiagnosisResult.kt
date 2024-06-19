@@ -10,6 +10,8 @@ import android.provider.MediaStore
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.loginscreen.R
+import com.example.loginscreen.categories.FlowersDiseases
+import com.example.loginscreen.categories.Fruits
 import com.example.loginscreen.databinding.FragmentDiagnoseBinding
 import com.example.loginscreen.home.SnapTips
 import com.example.loginscreen.ml.Classes23
@@ -37,6 +39,7 @@ class DiagnosisResult : AppCompatActivity() {
 //      callbacks
         openSnapTips()
         leaves()
+        flowers()
 
         binding.uploadView.setOnClickListener { startActivity(Intent(this, UploadImage::class.java)) }
 
@@ -65,11 +68,11 @@ class DiagnosisResult : AppCompatActivity() {
 
     private fun classifyImage(image: Bitmap) {
         try {
-            val model = ConvertedModel.newInstance(applicationContext)
+            val model = Classes23.newInstance(applicationContext)
 
             // Creates inputs for reference.
             val inputFeature0 =
-                TensorBuffer.createFixedSize(intArrayOf(1, 150, 150, 3), DataType.FLOAT32)
+                TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.FLOAT32)
             val byteBuffer = ByteBuffer.allocateDirect(4 * imageSize * imageSize * 3)
             byteBuffer.order(ByteOrder.nativeOrder())
             val intValues = IntArray(imageSize * imageSize)
@@ -170,5 +173,9 @@ class DiagnosisResult : AppCompatActivity() {
 
     private fun leaves(){binding.leavesCv.setOnClickListener {
         startActivity(Intent(this, LeavesCategory::class.java)) }}
+
+    private fun flowers() {
+        binding.flowersCV.setOnClickListener { startActivity(Intent(this, FlowersDiseases::class.java)) }
+    }
 
 }

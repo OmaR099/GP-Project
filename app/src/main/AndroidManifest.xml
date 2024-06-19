@@ -46,6 +46,15 @@
             android:name=".moreService.FlowersIdentification"
             android:exported="false" />
         <activity
+            android:name=".moreService.PestsIde"
+            android:exported="false" />
+        <activity
+            android:name=".moreService.ToxicIde"
+            android:exported="false" />
+        <activity
+            android:name=".Test"
+            android:exported="false" />
+        <activity
             android:name=".home.AskExpertFragment"
             android:exported="false" />
         <activity
@@ -125,7 +134,28 @@
             android:name=".categories.PlantLeaf"
             android:exported="false" />
         <activity
+            android:name=".categories.FlowersDiseases"
+            android:exported="false" />
+        <activity
+            android:name=".chatBot.ChatBot"
+            android:exported="false" />
+        <activity
+            android:name=".profile.Settings"
+            android:exported="false" />
+        <activity
             android:name=".SignUpPhoneNumber"
+            android:exported="false" />
+        <activity
+            android:name=".categories.CategoryDiseaseResult"
+            android:exported="false" />
+        <activity
+            android:name=".settings.AboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".settings.SecurityPrivacy"
+            android:exported="false" />
+        <activity
+            android:name=".settings.Faq"
             android:exported="false" />
         <activity
             android:name=".SignInActivity"

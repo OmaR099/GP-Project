@@ -215,6 +215,35 @@
     <string name="toxicity">Toxicity:</string>
     <string name="care_guide">Care Guide:</string>
     <string name="uses">Uses:</string>
+    <string name="chatbot">Chatbot</string>
+    <string name="settings">Settings</string>
+    <string name="text_size">Text Size</string>
+    <string name="language">Language</string>
+    <string name="send_us_a_message">Send us a message</string>
+    <string name="about_us">About Us</string>
+    <string name="faqs">FAQs</string>
+    <string name="security_amp_privacy"><![CDATA[Security & Privacy]]></string>
+    <string name="night_mode">Night Mode</string>
+    <string name="private_account">Private Account</string>
+    <string name="ask_a_chatbot">Ask a Chatbot</string>
+    <string name="check_if_your_plant_has_the_following_symptoms">Check if your plant has the following symptoms:</string>
+    <string name="privacy_settings">Privacy Settings</string>
+    <string name="use_biometric_authentication">Use biometric authentication</string>
+    <string name="security_settings">Security Settings</string>
+    <string name="allow_location_access">Allow location access</string>
+    <string name="allow_data_collection">Allow data collection</string>
+    <string name="save_settings">Save Settings</string>
+
+    <string name="lorem_ipsum">Leafy Lens is a mobile application designed to help you keep your plants healthy. It uses artificial intelligence to identify diseases from photos, provides personalized care tips, and reminds you of important tasks. </string>
+    <string name="for_app">Leafy Lens is perfect for all plant lovers, from beginners to seasoned green thumbs. It helps you keep your plants thriving and identify problems early on. </string>
+    <string name="how_app">Leafy Lens utilizes cutting-edge Convolutional Neural Networks (CNNs) to analyze pictures of your plants and recognize diseases. The detection accuracy continuously improves over time through machine learning. </string>
+    <string name="what_info">The app offers detailed profiles for various plant types, including information on: * Watering * Lighting requirements * Fertilization * Ideal temperature ranges </string>
+    <string name="what_device">Currently, Leafy Lens is only available for Android devices. An iOS version is in development. </string>
+    <string name="how_do">Signing up in the app is easy! You can register with your email address or your social network account. </string>
+    <string name="what_happens">Your data is securely stored on our servers. We never share your information with third parties without your consent. </string>
+    <string name="can_the">Absolutely! Leafy Lens accesses weather data and compares it with your plants ideal temperature ranges. You\'ll receive notifications if extreme temperatures or storms are on the horizon. </string>
+    <string name="can_i">Yes, you can set up customized reminders for watering, fertilizing, or learning more about your specific plants. </string>
+    <string name="what_kind">Based on the plant type, the app suggests suitable fertilizers to help your plants flourish. </string>
 
     <string-array name="frequently_water">
         <item>Daily</item>

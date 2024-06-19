@@ -13,6 +13,7 @@ import android.provider.MediaStore
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.example.loginscreen.chatBot.ChatBot
 import com.example.loginscreen.databinding.ActivityResultBinding
 import com.example.loginscreen.home.AskExpertFragment
 import com.google.firebase.database.DatabaseReference
@@ -44,6 +45,7 @@ class Result: AppCompatActivity() {
         readData(result.toString())
         googleSearch()
         askExpert()
+        chatBot()
         downloadImageLongPress()
     }
 
@@ -85,6 +87,11 @@ class Result: AppCompatActivity() {
 
     private fun askExpert(){binding.askExpertsTv.setOnClickListener {
         startActivity(Intent(this, AskExpertFragment::class.java)) }}
+    private fun chatBot() {
+        binding.askChatBotTv.setOnClickListener {
+            startActivity(Intent(this, ChatBot::class.java)) }
+    }
+
 
     private fun downloadImageLongPress(){
         // download image with long press on it

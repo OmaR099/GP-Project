@@ -11,9 +11,11 @@ import android.widget.ImageView
 import com.example.loginscreen.BaseActivity
 import com.example.loginscreen.R
 import com.example.loginscreen.SignInActivity
+import com.example.loginscreen.chatBot.ChatBot
 import com.example.loginscreen.databinding.ActivityProfileBinding
 import com.example.loginscreen.profile.Feedback
 import com.example.loginscreen.profile.NotificationSettingFragment
+import com.example.loginscreen.profile.Settings
 import com.facebook.AccessToken
 import com.facebook.GraphRequest
 import com.facebook.login.LoginManager
@@ -57,6 +59,8 @@ class ProfileActivity : BaseActivity() {
         feedback()
         uploadProfilePic()
         makeStatusBarTransparent()
+        chatBot()
+        settings()
     }
 
     private fun makeStatusBarTransparent() {
@@ -176,5 +180,15 @@ class ProfileActivity : BaseActivity() {
     private fun notification() {
         binding.notificationBtn.setOnClickListener {
             startActivity(Intent(this, NotificationSettingFragment::class.java)) }
+    }
+
+    private fun chatBot() {
+        binding.chatBotCv.setOnClickListener {
+            startActivity(Intent(this, ChatBot::class.java)) }
+    }
+
+    private fun settings() {
+        binding.settingBtn.setOnClickListener {
+            startActivity(Intent(this, Settings::class.java)) }
     }
 }

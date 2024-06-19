@@ -30,7 +30,7 @@
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/img_pests"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/x600"
+                android:layout_height="@dimen/x800"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
                 app:layout_constraintStart_toStartOf="parent"
@@ -175,6 +175,7 @@
                 tools:text="The Boxelder is generally considered non-toxic to humans and pets." />
 
             <HorizontalScrollView
+                android:id="@+id/pictures"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -215,6 +216,85 @@
                         app:shapeAppearanceOverlay="@style/roundimageview" />
                 </LinearLayout>
             </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@color/background_green"
+                android:orientation="vertical"
+                android:padding="@dimen/x32"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pictures">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/experts_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_expert_diagnose"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/experts_title_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x24"
+                        android:text="@string/diagnose2_new"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/experts_iv"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/experts_subtitle_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x24"
+                        android:layout_marginTop="@dimen/x10"
+                        android:text="@string/diagnose1_new"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/experts_iv"
+                        app:layout_constraintTop_toBottomOf="@+id/experts_title_tv" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/ask_experts_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x80"
+                    android:layout_marginTop="@dimen/x24"
+                    android:background="@drawable/shape_solid_1fcc98_r_22"
+                    android:gravity="center"
+                    android:padding="7dp"
+                    android:text="@string/plantdetailoverview_planthealth_text_askanexpert"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:id="@+id/ask_chatBot_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x80"
+                    android:layout_marginTop="@dimen/x24"
+                    android:background="@drawable/shape_solid_1fcc98_r_22"
+                    android:gravity="center"
+                    android:padding="7dp"
+                    android:text="@string/ask_a_chatbot"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+            </LinearLayout>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline2"

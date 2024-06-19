@@ -21,21 +21,20 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.loginscreen.Test
 import com.example.loginscreen.databinding.FragmentUploadImageBinding
-import com.example.loginscreen.ml.AutoModel21ClassesDiseasedetection
 import com.example.loginscreen.ml.Classes23
-import com.example.loginscreen.ml.ConvertedModel
-import com.example.loginscreen.ml.DiseaseDetection
+import com.example.loginscreen.ml.FlowersQuantized
+import com.example.loginscreen.ml.PestsQuant
+import com.example.loginscreen.ml.PestsWithBackground
 import org.tensorflow.lite.DataType
+import org.tensorflow.lite.support.common.TensorOperator
 import org.tensorflow.lite.support.common.ops.NormalizeOp
 import org.tensorflow.lite.support.image.ImageProcessor
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.image.ops.ResizeOp
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
-import java.io.ByteArrayOutputStream
 import java.io.IOException
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
 
 class UploadImage: AppCompatActivity() {
 
@@ -50,6 +49,8 @@ class UploadImage: AppCompatActivity() {
     private lateinit var buttonLoad: Button
     private lateinit var tvOutput: TextView
     private lateinit var bitmap: Bitmap
+    private val IMAGE_MEAN = 0.0f
+    private val IMAGE_STD = 1.0f
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -145,22 +146,21 @@ class UploadImage: AppCompatActivity() {
     private fun outputGenerator(bitmap: Bitmap) {
 
         val imageProcessor = ImageProcessor.Builder()
-            .add(NormalizeOp(0.0f, 255.0f))
-            .add(ResizeOp(224, 224, ResizeOp.ResizeMethod.BILINEAR))
+            .add(ResizeOp(224, 224, ResizeOp.ResizeMethod.NEAREST_NEIGHBOR))
             .build()
 
 
-        val labels = application.assets.open("labels23.txt").bufferedReader().readLines()
+        val labels = application.assets.open("pests_quant.txt").bufferedReader().readLines()
 
-        var tensorImage = TensorImage(DataType.FLOAT32)
+        var tensorImage = TensorImage(DataType.UINT8)
         tensorImage.load(bitmap)
 
         tensorImage = imageProcessor.process(tensorImage)
 
-        val model = Classes23.newInstance(this)
+        val model = PestsQuant.newInstance(this)
 
 // Creates inputs for reference.
-        val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.FLOAT32)
+        val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.UINT8)
         inputFeature0.loadBuffer(tensorImage.buffer)
 
 // Runs model inference and gets result.
@@ -223,5 +223,7 @@ class UploadImage: AppCompatActivity() {
         return null
     }
 
-
+    private fun getPreprocessNormalizeOp(): TensorOperator {
+        return NormalizeOp(IMAGE_MEAN, IMAGE_STD)
+    }
 }

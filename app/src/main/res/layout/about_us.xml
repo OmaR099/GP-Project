@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_green"
+    android:orientation="vertical"
+    android:tag="layout/activity_search_plant_0">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/layout_toolbar_about_us"
+        app:layout_constraintStart_toStartOf="@+id/scrollView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/screenshot_2024_05_14_032427_removebg_preview"
+                android:importantForAccessibility="no" />
+
+            <LinearLayout
+                android:id="@+id/container_empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingStart="32dp"
+                android:paddingEnd="@dimen/x64"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y300"
+                    android:text="@string/searchplant_text_noresults"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/empty_tip_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y16"
+                    android:textColor="@color/gl_text_color3"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_below="@+id/imageView7"
+                android:fontFamily="@font/amaranth"
+                android:text="At Leafy Lens, we're a team driven by a shared passion: empowering everyone to become confident plant parents. We believe healthy plants not only enhance our living spaces but also contribute to a greener planet. Our team brings together talented individuals from various backgrounds. Our mobile app developers, using Android Studio, meticulously crafted the user-friendly interface that makes [App Name] a breeze to navigate. Working tirelessly behind the scenes, our backend specialists ensure secure user logins, maintain a robust database for plant information, and manage the crucial weather data. This data allows us to compare real-time weather conditions with your plant's ideal temperature range. We can then provide personalized recommendations, suggesting the best fertilizers for your specific plant types and even issuing weather alerts if the current conditions pose a potential risk. Our AI specialists have meticulously trained a powerful Convolutional Neural Network model. This model analyzes images captured through your phone's camera, enabling accurate disease detection. With early identification, you can take timely action and save your beloved plants. But that's not all – our AI model is constantly learning and evolving, ensuring the highest possible accuracy in disease detection over time."
+                android:textColor="@color/black"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_below="@+id/imageView8"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:backgroundTint="@color/green"
+                android:hapticFeedbackEnabled="false"
+                android:text="@string/back" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="250dp"
+                    android:layout_height="195dp"
+                    android:layout_below="@id/textView"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="270dp"
+                    app:srcCompat="@drawable/ghghg"
+                    android:importantForAccessibility="no" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="150dp"
+                    android:layout_below="@id/textView"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/amaranth"
+                    android:text="We see ourselves as more than just an app. We're committed to fostering a thriving community of plant enthusiasts. Our team of plant care enthusiasts has compiled detailed plant profiles within the app, offering valuable information on specific plant varieties, including proper watering techniques, ideal sunlight conditions, and additional care tips. We understand that life gets busy, so we've included a customizable reminder system to ensure you never forget to water, fertilize, or learn more about your plants. Download [App Name] today and join the [App Name] family! We're your partners in plant parenthood, ready to help you unlock a world of healthy, thriving greenery. Let's transform your home into a flourishing oasis, together!"
+                    android:textColor="@color/black" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:scaleType="fitXY"
+                    android:layout_height="110dp"
+                    android:layout_below="@+id/textView3"
+                    app:srcCompat="@drawable/bhbhb" />
+            </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

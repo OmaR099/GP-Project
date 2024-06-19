@@ -21,7 +21,7 @@
                 android:id="@+id/imgPlantDiseaseImgSmall"
                 android:layout_width="match_parent"
                 android:adjustViewBounds="true"
-                android:layout_height="@dimen/x600"
+                android:layout_height="@dimen/x800"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:scaleType="fitXY" />
@@ -30,7 +30,7 @@
                 android:id="@+id/rounded_shape"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginTop="285dp"
+                android:layout_marginTop="385dp"
                 android:background="@drawable/bg_diagnose_top"
                 app:layout_constraintBottom_toTopOf="@+id/disease_title_container"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -333,7 +333,7 @@
                                 android:layout_marginStart="@dimen/x24"
                                 android:text="@string/diagnose2_new"
                                 android:textColor="@color/black"
-                                android:textSize="@dimen/x32"
+                                android:textSize="@dimen/_13ssp"
                                 android:textStyle="bold"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/experts_iv"
@@ -347,7 +347,7 @@
                                 android:layout_marginTop="@dimen/x10"
                                 android:text="@string/diagnose1_new"
                                 android:textColor="@color/color_666666"
-                                android:textSize="@dimen/x30"
+                                android:textSize="@dimen/_12ssp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/experts_iv"
@@ -364,7 +364,19 @@
                             android:gravity="center"
                             android:text="@string/plantdetailoverview_planthealth_text_askanexpert"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/x36" />
+                            android:textSize="@dimen/_14ssp" />
+
+                        <TextView
+                            android:id="@+id/ask_chatBot_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x80"
+                            android:padding="7dp"
+                            android:layout_marginTop="@dimen/x24"
+                            android:background="@drawable/shape_solid_1fcc98_r_22"
+                            android:gravity="center"
+                            android:text="@string/ask_a_chatbot"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </LinearLayout>
 
